@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap");
+@import "modern-normalize/modern-normalize.css";
 
 :root {
   /* Colors */
@@ -13,8 +14,8 @@
   --color-text-inverse: #ffffff;
 
   /* Typography */
-  --font-serif-family: 'Merriweather', serif;
-  --font-sans-family: 'Inter', sans-serif;
+  --font-serif-family: "Merriweather", serif;
+  --font-sans-family: "Inter", sans-serif;
 
   /* Spacings */
   --spacing-section-y: 5rem;

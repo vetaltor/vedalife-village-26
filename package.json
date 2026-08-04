@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "@trivago/prettier-plugin-sort-imports": "6.0.2",
+    "clsx": "2.1.1",
     "D": "1.0.0",
     "lucide-react": "1.28.0",
+    "modern-normalize": "3.0.1",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-router": "8.3.0",

@@ -1,0 +1,78 @@
+@font-face {
+  font-display: swap;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url(/font/NotoSans-v12/notosans-r.woff2) format("woff2"),
+    url(/font/NotoSans-v12/notosans-r.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Noto Sans;
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url(/font/NotoSans-v12/notosans-ri.woff2) format("woff2"),
+    url(/font/NotoSans-v12/notosans-ri.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url(/font/NotoSans-v12/notosans-b.woff2) format("woff2"),
+    url(/font/NotoSans-v12/notosans-b.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Noto Sans;
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url(/font/NotoSans-v12/notosans-bi.woff2) format("woff2"),
+    url(/font/NotoSans-v12/notosans-bi.woff) format("woff");
+}
+.font--noto-sans {
+  font-family:
+    Noto Sans,
+    Arial,
+    sans-serif;
+}
+@font-face {
+  font-display: swap;
+  font-family: Charis;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url(/font/Charis/charis-r.woff2) format("woff2"),
+    url(/font/Charis/charis-r.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Charis;
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url(/font/Charis/charis-i.woff2) format("woff2"),
+    url(/font/Charis/charis-i.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Charis;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url(/font/Charis/charis-b.woff2) format("woff2"),
+    url(/font/Charis/charis-b.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Charis;
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url(/font/Charis/charis-bi.woff2) format("woff2"),
+    url(/font/Charis/charis-bi.woff) format("woff");
+}

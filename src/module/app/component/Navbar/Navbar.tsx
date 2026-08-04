@@ -1,9 +1,9 @@
-import {Link, NavLink} from 'react-router';
-import {CONTACTS, FESTIVAL} from '@/data/festival';
+import { Link, NavLink } from 'react-router';
+import { CONTACTS, FESTIVAL } from '@/data/festival';
 import styles from './Navbar.module.css';
 
 export function Navbar() {
-  const navLinkClass = ({isActive}: {isActive: boolean}) =>
+  const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink;
 
   return (
@@ -14,6 +14,9 @@ export function Navbar() {
         </Link>
 
         <div className={styles.navLinks}>
+          <NavLink to="/" className={navLinkClass}>
+            Головна
+          </NavLink>
           <NavLink to="/program" className={navLinkClass}>
             Програма
           </NavLink>
