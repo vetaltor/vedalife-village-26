@@ -1,7 +1,7 @@
 export function generateScopedName(
   name: string,
-  filename: string,
-  css: string
+  filename: string
+  // css: string
 ): string {
   const base = filename!
     .split('/')!
@@ -19,10 +19,10 @@ export function generateScopedName(
   return `${base}__${name}-${hash}`;
 }
 
-function hashCode(string: string, hashLength = 5): string {
-  let hash;
-  for (let i = 0; i < string.length; i++) {
-    hash = (Math.imul(31, hash) + string.charCodeAt(i)) | 0;
+function hashCode(subject: string, hashLength = 5): string {
+  let hash = 1;
+  for (let i = 0; i < subject.length; i++) {
+    hash = (Math.imul(31, hash) + subject.charCodeAt(i)) | 0;
   }
 
   return Math.abs(hash).toString().slice(0, hashLength);
