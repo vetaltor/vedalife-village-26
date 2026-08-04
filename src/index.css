@@ -23,21 +23,6 @@
   --spacing-element-lg: 2rem;
 }
 
-@theme {
-  --color-sage-light: var(--color-sage-light);
-  --color-cream: var(--color-cream);
-  --color-deep-purple: var(--color-deep-purple);
-  --color-olive: var(--color-olive-dark);
-  --color-olive-hover: var(--color-olive-hover);
-
-  --color-text-main: var(--color-text-main);
-  --color-text-muted: var(--color-text-muted);
-  --color-text-inverse: var(--color-text-inverse);
-
-  --font-serif: var(--font-serif-family);
-  --font-sans: var(--font-sans-family);
-}
-
 body {
   font-family: var(--font-sans-family);
   color: var(--color-text-main);

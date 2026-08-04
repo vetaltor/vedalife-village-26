@@ -1,0 +1,25 @@
+.section {
+  padding: 0 0 var(--spacing-section-y);
+}
+
+.inner {
+  background-color: var(--color-cream);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(28, 14, 48, 0.06);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding: 2.5rem 3rem;
+  }
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  margin: 0;
+  max-width: 52rem;
+  font-family: var(--font-serif-family);
+}

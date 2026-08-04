@@ -1,0 +1,121 @@
+.section {
+  padding: 0 0 var(--spacing-section-y);
+}
+
+.inner {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-deep-purple);
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+.subheading {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin: 0 0 3rem;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--color-cream);
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  box-shadow: 0 10px 15px -3px rgba(28, 14, 48, 0.05);
+  transition:
+    border-color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.card:hover {
+  border-color: var(--color-olive-dark);
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
+
+.iconWrapper {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: #e2e6d4;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-olive-dark);
+  margin-bottom: 1.25rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  color: var(--color-deep-purple);
+}
+
+.cardDescription {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.arrow {
+  color: var(--color-olive-dark);
+  margin-top: 1rem;
+  align-self: flex-end;
+  transition: transform 0.2s;
+}
+
+.card:hover .arrow {
+  transform: translate(2px, -2px);
+}

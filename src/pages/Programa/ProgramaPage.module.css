@@ -1,0 +1,88 @@
+.section {
+  padding: 3rem 0 var(--spacing-section-y);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-deep-purple);
+  margin: 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.text {
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin: 0 0 2rem;
+}
+
+.card {
+  background-color: var(--color-cream);
+  border: 1px solid #e5eab6;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.cardText {
+  margin: 0;
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
+.instagramBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-deep-purple);
+  color: var(--color-text-inverse);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.instagramBtn:hover {
+  background-color: #2b1647;
+}
+
+.instagramBtn:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
+
+.registerLink {
+  display: inline-block;
+  background-color: var(--color-olive-dark);
+  color: var(--color-text-inverse);
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.registerLink:hover {
+  background-color: var(--color-olive-hover);
+}
+
+.registerLink:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
