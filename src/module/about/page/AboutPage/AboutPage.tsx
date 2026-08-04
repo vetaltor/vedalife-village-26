@@ -1,9 +1,9 @@
 import {Link} from 'react-router';
 import {InstagramIcon} from '@/components/InstagramIcon';
 import {CONTACTS, FESTIVAL} from '@/data/festival';
-import styles from './ProNasPage.module.css';
+import styles from './AboutPage.module.css';
 
-export function ProNasPage() {
+export function AboutPage() {
   return (
     <section className={styles.section}>
       <h1 className={styles.title}>Про нас</h1>

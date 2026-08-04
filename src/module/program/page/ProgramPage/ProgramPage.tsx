@@ -1,9 +1,9 @@
-import {Link} from 'react-router';
-import {InstagramIcon} from '@/components/InstagramIcon';
-import {CONTACTS} from '@/data/festival';
-import styles from './ProgramaPage.module.css';
+import { Link } from 'react-router';
+import { InstagramIcon } from '@/components/InstagramIcon';
+import { CONTACTS } from '@/data/festival';
+import styles from './ProgramPage.module.css';
 
-export function ProgramaPage() {
+export function ProgramPage() {
   return (
     <section className={styles.section}>
       <h1 className={styles.title}>Програма фестивалю</h1>

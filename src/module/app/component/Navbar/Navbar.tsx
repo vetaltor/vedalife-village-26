@@ -14,10 +14,10 @@ export function Navbar() {
         </Link>
 
         <div className={styles.navLinks}>
-          <NavLink to="/programa" className={navLinkClass}>
+          <NavLink to="/program" className={navLinkClass}>
             Програма
           </NavLink>
-          <NavLink to="/pro-nas" className={navLinkClass}>
+          <NavLink to="/about" className={navLinkClass}>
             Про нас
           </NavLink>
           <a

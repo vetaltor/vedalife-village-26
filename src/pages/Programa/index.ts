@@ -1,1 +1,0 @@
-export {ProgramaPage} from './ProgramaPage';

@@ -1,6 +1,6 @@
-import {Link} from 'react-router';
-import {InstagramIcon} from '@/components/InstagramIcon';
-import {CONTACTS, FESTIVAL} from '@/data/festival';
+import { Link } from 'react-router';
+import { InstagramIcon } from '@/components/InstagramIcon';
+import { CONTACTS, FESTIVAL } from '@/data/festival';
 import styles from './Footer.module.css';
 
 export function Footer() {
