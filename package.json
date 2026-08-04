@@ -1,5 +1,5 @@
 {
-  "name": "123",
+  "name": "Vedalife Village 2026",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=22.22.0"
   },
   "dependencies": {
     "lucide-react": "1.28.0",
