@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --color-sage-light: #e5eab6;
+  --color-cream: #f9faef;
+  --color-deep-purple: #1c0e30;
+  --color-olive-dark: #5f721d;
+  --color-olive-hover: #4e5f18;
+
+  --color-text-main: #1a1a1a;
+  --color-text-muted: #616e5c;
+  --color-text-inverse: #ffffff;
+
+  /* Typography */
+  --font-serif-family: 'Merriweather', serif;
+  --font-sans-family: 'Inter', sans-serif;
+
+  /* Spacings */
+  --spacing-section-y: 5rem;
+  --spacing-element-sm: 0.5rem;
+  --spacing-element-md: 1rem;
+  --spacing-element-lg: 2rem;
+}
+
+@theme {
+  --color-sage-light: var(--color-sage-light);
+  --color-cream: var(--color-cream);
+  --color-deep-purple: var(--color-deep-purple);
+  --color-olive: var(--color-olive-dark);
+  --color-olive-hover: var(--color-olive-hover);
+
+  --color-text-main: var(--color-text-main);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+
+  --font-serif: var(--font-serif-family);
+  --font-sans: var(--font-sans-family);
+}
+
+body {
+  font-family: var(--font-sans-family);
+  color: var(--color-text-main);
+  background-color: var(--color-sage-light);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif-family);
+}
