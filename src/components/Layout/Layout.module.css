@@ -1,21 +1,19 @@
-.app {
+.layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.topSection {
+.main {
   flex: 1;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
-  display: flex;
-  flex-direction: column;
+  padding: 0 1.5rem;
 }
 
 @media (min-width: 1024px) {
-  .topSection {
+  .main {
     padding-left: 3rem;
     padding-right: 3rem;
   }
