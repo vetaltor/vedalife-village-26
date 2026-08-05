@@ -1,8 +1,8 @@
 export const FESTIVAL = {
-  name: 'Veda Life Eco Village',
+  name: 'Vedalife Eco Village',
   subtitle: 'фестиваль ведичної культури',
   dates: '22–23 серпня',
-  location: 'Govinda Land, с. Мала Ростівка, Вінницька область',
+  location: 'Govindaland, с. Мала Ростівка, Вінницька область',
   address: 'с. Мала Ростівка, Вінницька область',
 } as const;
 

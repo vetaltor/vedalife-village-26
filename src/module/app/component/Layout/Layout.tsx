@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router';
 import { Footer } from '@/module/app/component/Footer';
-import { Navbar } from '@/module/app/component/Navbar';
-import styles from './Layout.module.css';
+import { AppHeader } from '../AppHeader';
+import s from './Layout.module.css';
 
 export function Layout() {
   const { pathname, hash } = useLocation();
@@ -19,9 +19,9 @@ export function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div className={styles.layout}>
-      <Navbar />
-      <main id="main" className={styles.main}>
+    <div className={s.root}>
+      <AppHeader />
+      <main id="main" className={s.main}>
         <Outlet />
       </main>
       <Footer />

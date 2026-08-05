@@ -1,4 +1,4 @@
-.header {
+.root {
   padding: 2rem 1.5rem 0;
   width: 100%;
   max-width: 1400px;
@@ -65,7 +65,7 @@
 }
 
 .navLinkActive::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.25rem;
   left: 0;
@@ -86,7 +86,9 @@
   color: var(--color-text-inverse);
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
 @media (min-width: 480px) {

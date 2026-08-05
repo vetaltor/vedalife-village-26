@@ -4,7 +4,7 @@ type InstagramIconProps = {
   size?: number;
 };
 
-export function InstagramIcon({size = 24}: InstagramIconProps) {
+export function InstagramIcon({ size = 24 }: InstagramIconProps) {
   return (
     <svg
       width={size}

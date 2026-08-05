@@ -1,0 +1,34 @@
+{
+  "usesTypeScript": false,
+  "usesCssModule": false,
+  "cssPreprocessor": "css",
+  "testLibrary": "None",
+  "component": {
+    "default": {
+      "path": "src/shared/component",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": true,
+      "withProps": false,
+      "customTemplates": {
+        "component": "tools/generate-react-cli/templates/default/TemplateName.tsx",
+        "style": "tools/generate-react-cli/templates/default/TemplateName.module.css",
+        "index": "tools/generate-react-cli/templates/default/index.ts"
+      }
+    },
+    "module": {
+      "path": "src/module",
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": true,
+      "customTemplates": {
+        "component": "tools/generate-react-cli/templates/module/TemplateNameModule.tsx",
+        "index": "tools/generate-react-cli/templates/module/index.ts"
+      }
+    }
+  },
+  "usesStyledComponents": false
+}

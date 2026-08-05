@@ -1,6 +1,6 @@
-import {Link} from 'react-router';
-import {InstagramIcon} from '@/components/InstagramIcon';
-import {CONTACTS, FESTIVAL} from '@/data/festival';
+import { Link } from 'react-router';
+import { CONTACTS, FESTIVAL } from '@/data/festival';
+import { InstagramIcon } from '@/shared/component/InstagramIcon';
 import styles from './AboutPage.module.css';
 
 export function AboutPage() {

@@ -1,6 +1,6 @@
-import {MapPin} from 'lucide-react';
-import {InstagramIcon} from '@/components/InstagramIcon';
-import {CONTACTS, FESTIVAL} from '@/data/festival';
+import { MapPin } from 'lucide-react';
+import { CONTACTS, FESTIVAL } from '@/data/festival';
+import { InstagramIcon } from '@/shared/component/InstagramIcon';
 import styles from './LocationSection.module.css';
 
 export function LocationSection() {

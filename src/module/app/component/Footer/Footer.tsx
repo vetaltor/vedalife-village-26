@@ -1,29 +1,30 @@
 import { Link } from 'react-router';
-import { InstagramIcon } from '@/components/InstagramIcon';
+import { ROUTES } from '@/config/routes';
 import { CONTACTS, FESTIVAL } from '@/data/festival';
-import styles from './Footer.module.css';
+import { InstagramIcon } from '@/shared/component/InstagramIcon';
+import s from './Footer.module.css';
 
 export function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.inner}>
-        <div className={styles.brandBlock}>
-          <p className={styles.brand}>{FESTIVAL.name}</p>
-          <p className={styles.tagline}>{FESTIVAL.subtitle}</p>
+    <footer className={s.footer}>
+      <div className={s.inner}>
+        <div className={s.brandBlock}>
+          <p className={s.brand}>{FESTIVAL.name}</p>
+          <p className={s.tagline}>{FESTIVAL.subtitle}</p>
         </div>
 
-        <nav className={styles.nav} aria-label="Навігація у футері">
-          <Link to="/programa" className={styles.link}>
+        <nav className={s.nav} aria-label="Навігація у футері">
+          <Link to={ROUTES.program} className={s.link}>
             Програма
           </Link>
-          <Link to="/pro-nas" className={styles.link}>
+          <Link to={ROUTES.about} className={s.link}>
             Про нас
           </Link>
         </nav>
 
         <a
           href={CONTACTS.instagramUrl}
-          className={styles.instagramLink}
+          className={s.instagramLink}
           target="_blank"
           rel="noopener noreferrer"
         >
