@@ -1,10 +1,12 @@
+import clsx from 'clsx';
 import { MESSAGES } from '@/data/messages';
+import { LayoutStyles } from '@/module/app/component/Layout';
 import s from './AboutSection.module.css';
 
 export function AboutSection() {
   return (
     <section
-      className={s.section}
+      className={clsx(s.root, LayoutStyles.fixedWidth)}
       id="about"
       aria-label={MESSAGES.home.aboutSection.title}
     >

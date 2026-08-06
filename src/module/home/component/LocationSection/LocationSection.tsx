@@ -1,11 +1,17 @@
+import clsx from 'clsx';
 import { MapPin } from 'lucide-react';
 import { CONTACTS, FESTIVAL } from '@/data/festival';
+import { LayoutStyles } from '@/module/app/component/Layout';
 import { InstagramIcon } from '@/shared/component/InstagramIcon';
 import s from './LocationSection.module.css';
 
 export function LocationSection() {
   return (
-    <section className={s.root} id="location" aria-label="Місце проведення">
+    <section
+      className={clsx(s.root, LayoutStyles.fixedWidth)}
+      id="location"
+      aria-label="Місце проведення"
+    >
       <div className={s.inner}>
         <h2 className={s.heading}>Місце проведення</h2>
         <div className={s.description}>

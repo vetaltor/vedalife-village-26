@@ -17,6 +17,11 @@
   }
 }
 
+.inner {
+  max-width: var(--main-max-width);
+  margin: 0 auto;
+}
+
 .dateBadge {
   display: inline-flex;
   align-items: center;

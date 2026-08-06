@@ -3,7 +3,7 @@
 }
 
 .main {
-  max-width: var(--main-max-width);
+  /* max-width: var(--main-max-width); */
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -13,4 +13,9 @@
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+
+.fixedWidth {
+  max-width: var(--main-max-width);
+  margin: 0 auto;
 }

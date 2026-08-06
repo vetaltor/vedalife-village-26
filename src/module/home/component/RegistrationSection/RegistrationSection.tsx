@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import {
   ArrowUpRight,
   Handshake,
@@ -10,6 +11,7 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { FESTIVAL, REGISTRATION_URLS } from '@/data/festival';
+import { LayoutStyles } from '@/module/app/component/Layout';
 import s from './RegistrationSection.module.css';
 
 type RegistrationPath = {
@@ -70,7 +72,11 @@ const REGISTRATION_PATHS: RegistrationPath[] = [
 
 export function RegistrationSection() {
   return (
-    <section className={s.root} id="register" aria-label="Реєстрації">
+    <section
+      className={clsx(s.root, LayoutStyles.fixedWidth)}
+      id="register"
+      aria-label="Реєстрації"
+    >
       <div className={s.inner}>
         <h2 className={s.heading}>Оберіть формат участі</h2>
         <p className={s.subheading}>

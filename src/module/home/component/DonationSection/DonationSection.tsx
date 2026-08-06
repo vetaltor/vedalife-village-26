@@ -1,7 +1,9 @@
-import {useState} from 'react';
-import {Check, Copy, Heart} from 'lucide-react';
-import {DONATION} from '@/data/festival';
-import styles from './DonationSection.module.css';
+import { useState } from 'react';
+import clsx from 'clsx';
+import { Check, Copy, Heart } from 'lucide-react';
+import { DONATION } from '@/data/festival';
+import { LayoutStyles } from '@/module/app/component/Layout';
+import s from './DonationSection.module.css';
 
 function buildRequisitesText(): string {
   return [
@@ -26,44 +28,47 @@ export function DonationSection() {
   };
 
   return (
-    <section className={styles.section} aria-label="Пожертви">
-      <div className={styles.inner}>
-        <div className={styles.header}>
-          <span className={styles.iconWrapper}>
+    <section
+      className={clsx(s.root, LayoutStyles.fixedWidth)}
+      aria-label="Пожертви"
+    >
+      <div className={s.inner}>
+        <div className={s.header}>
+          <span className={s.iconWrapper}>
             <Heart size={22} aria-hidden="true" />
           </span>
-          <h2 className={styles.heading}>Підтримати фестиваль</h2>
+          <h2 className={s.heading}>Підтримати фестиваль</h2>
         </div>
-        <p className={styles.text}>
+        <p className={s.text}>
           Вхід на фестиваль вільний. Якщо ви бажаєте підтримати фестиваль та
           Govinda Land, можете зробити добровільну пожертву — вона допомагає
           організовувати подію та життя ашраму.
         </p>
 
-        <div className={styles.cards}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Реквізити ФОП</h3>
-            <dl className={styles.requisites}>
-              <div className={styles.requisite}>
+        <div className={s.cards}>
+          <div className={s.card}>
+            <h3 className={s.cardTitle}>Реквізити ФОП</h3>
+            <dl className={s.requisites}>
+              <div className={s.requisite}>
                 <dt>Отримувач</dt>
                 <dd>{DONATION.fop.name}</dd>
               </div>
-              <div className={styles.requisite}>
+              <div className={s.requisite}>
                 <dt>Код</dt>
                 <dd>{DONATION.fop.edrpou}</dd>
               </div>
-              <div className={styles.requisite}>
+              <div className={s.requisite}>
                 <dt>Рахунок</dt>
                 <dd>{DONATION.fop.iban}</dd>
               </div>
-              <div className={styles.requisite}>
+              <div className={s.requisite}>
                 <dt>Банк</dt>
                 <dd>{DONATION.fop.bank}</dd>
               </div>
             </dl>
             <button
               type="button"
-              className={styles.copyBtn}
+              className={s.copyBtn}
               onClick={handleCopy}
               aria-live="polite"
             >
@@ -81,15 +86,15 @@ export function DonationSection() {
             </button>
           </div>
 
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Банка Monobank</h3>
-            <p className={styles.cardText}>
+          <div className={s.card}>
+            <h3 className={s.cardTitle}>Банка Monobank</h3>
+            <p className={s.cardText}>
               Зручний спосіб підтримати фестиваль через банку Monobank у кілька
               кліків.
             </p>
             <a
               href={DONATION.monobankUrl}
-              className={styles.primaryBtn}
+              className={s.primaryBtn}
               target="_blank"
               rel="noopener noreferrer"
             >
