@@ -2,14 +2,15 @@ import {
   ArrowUpRight,
   Handshake,
   HeartHandshake,
+  MicVocal,
   Palette,
   Sparkles,
   Store,
   Tent,
 } from 'lucide-react';
-import type {LucideIcon} from 'lucide-react';
-import {REGISTRATION_URLS} from '@/data/festival';
-import styles from './RegistrationSection.module.css';
+import type { LucideIcon } from 'lucide-react';
+import { FESTIVAL, REGISTRATION_URLS } from '@/data/festival';
+import s from './RegistrationSection.module.css';
 
 type RegistrationPath = {
   id: keyof typeof REGISTRATION_URLS;
@@ -22,72 +23,82 @@ const REGISTRATION_PATHS: RegistrationPath[] = [
   {
     id: 'visitor',
     title: 'Відвідати фестиваль',
-    description: 'Приходьте як гість і пориньте в атмосферу фестивалю.',
+    description: 'Приїжджайте та пориньте в атмосферу фестивалю.',
     icon: Sparkles,
   },
   {
     id: 'volunteer',
     title: 'Стати волонтером',
-    description: 'Долучіться до команди та допоможіть організувати фестиваль.',
+    description:
+      'Станьте частиною команди та допоможіть створити особливу подію.',
     icon: HeartHandshake,
   },
   {
     id: 'fair',
     title: 'Участь у ярмарку',
-    description: 'Представте свою продукцію чи ремесло на фестивальному ярмарку.',
+    description:
+      'Запрошуємо майстрів, ремісників і виробників натуральної продукції представити свої вироби на фестивалі.',
     icon: Store,
   },
   {
     id: 'master',
-    title: 'Майстри та консультанти',
-    description: 'Проведіть майстер-клас або консультацію для гостей фестивалю.',
+    title: 'Майстри та лектори',
+    description:
+      'Проводите лекції, йогу, майстер-класи, оздоровчі практики, консультації чи ігри? Запрошуємо стати частиною фестивальної програми.',
     icon: Palette,
   },
   {
-    id: 'partner',
-    title: 'Стати партнером',
-    description: 'Підтримайте фестиваль як партнер чи спонсор.',
-    icon: Handshake,
+    id: 'artist',
+    title: 'Артисти та колективи',
+    description:
+      'Запрошуємо музикантів, виконавців та творчі колективи долучитися до музичної програми.',
+    icon: MicVocal,
   },
-  {
-    id: 'tentCamp',
-    title: 'Наметове містечко',
-    description: 'Забронюйте місце в наметовому містечку для проживання.',
-    icon: Tent,
-  },
+  // {
+  //   id: 'partner',
+  //   title: 'Стати партнером',
+  //   description: 'Підтримайте фестиваль як партнер чи спонсор.',
+  //   icon: Handshake,
+  // },
+  // {
+  //   id: 'tentCamp',
+  //   title: 'Наметове містечко',
+  //   description: 'Забронюйте місце в наметовому містечку для проживання.',
+  //   icon: Tent,
+  // },
 ];
 
 export function RegistrationSection() {
   return (
-    <section className={styles.section} id="register" aria-label="Реєстрації">
-      <div className={styles.inner}>
-        <h2 className={styles.heading}>Оберіть формат участі</h2>
-        <p className={styles.subheading}>
-          Кожен шлях відкриває свою Google Форму в новій вкладці.
+    <section className={s.section} id="register" aria-label="Реєстрації">
+      <div className={s.inner}>
+        <h2 className={s.heading}>Оберіть формат участі</h2>
+        <p className={s.subheading}>
+          Ми будемо дуже раді бачити вас на {FESTIVAL.name}!
         </p>
 
-        <ul className={styles.grid}>
+        <ul className={s.grid}>
           {REGISTRATION_PATHS.map((path) => {
             const Icon = path.icon;
             return (
               <li key={path.id}>
                 <a
                   href={REGISTRATION_URLS[path.id]}
-                  className={styles.card}
+                  className={s.card}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className={styles.iconWrapper}>
+                  <span className={s.iconWrapper}>
                     <Icon size={24} aria-hidden="true" />
                   </span>
-                  <span className={styles.cardContent}>
-                    <span className={styles.cardTitle}>{path.title}</span>
-                    <span className={styles.cardDescription}>
+                  <span className={s.cardContent}>
+                    <span className={s.cardTitle}>{path.title}</span>
+                    <span className={s.cardDescription}>
                       {path.description}
                     </span>
                   </span>
                   <ArrowUpRight
-                    className={styles.arrow}
+                    className={s.arrow}
                     size={20}
                     aria-hidden="true"
                   />

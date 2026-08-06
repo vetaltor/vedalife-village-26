@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router';
 import { ROUTES } from '@/config/routes';
-import { CONTACTS, FESTIVAL } from '@/data/festival';
+import { FESTIVAL } from '@/data/festival';
 import s from './AppHeader.module.css';
 
 export function AppHeader() {
@@ -13,27 +13,35 @@ export function AppHeader() {
         <Link to={ROUTES.home} className={s.brand}>
           {FESTIVAL.name}
         </Link>
-
         <div className={s.navLinks}>
           <NavLink to={ROUTES.home} className={navLinkClass}>
             Головна
           </NavLink>
+
+          <Link to={ROUTES.about} className={s.navLink}>
+            Про фестиваль
+          </Link>
+
           <NavLink to={ROUTES.program} className={navLinkClass}>
             Програма
           </NavLink>
-          <NavLink to={ROUTES.about} className={navLinkClass}>
-            Про нас
-          </NavLink>
-          <a
+
+          <Link to={ROUTES.location} className={s.navLink}>
+            Як дістатися
+          </Link>
+
+          <Link to={ROUTES.contacts} className={s.navLink}>
+            Контакти
+          </Link>
+          {/* <a
             href={CONTACTS.instagramUrl}
             className={s.navLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             Instagram
-          </a>
+          </a> */}
         </div>
-
         <Link to="/#register" className={s.ctaBtn}>
           Реєстрація
         </Link>

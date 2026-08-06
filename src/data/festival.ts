@@ -1,12 +1,11 @@
 export const FESTIVAL = {
   name: 'Vedalife Eco Village',
-  subtitle: 'фестиваль ведичної культури',
-  dates: '22–23 серпня',
+  subtitle: 'Фестиваль ведичної культури в Ґовіндаленді',
+  dates: '22 – 23 серпня',
   location: 'Govindaland, с. Мала Ростівка, Вінницька область',
   address: 'с. Мала Ростівка, Вінницька область',
 } as const;
 
-// ПЛЕЙСХОЛДЕРИ: замініть на актуальні URL Google Forms, які надасть організатор.
 export const REGISTRATION_URLS = {
   visitor: 'https://forms.example.com/festival-visitor',
   volunteer: 'https://forms.example.com/festival-volunteer',
@@ -14,9 +13,9 @@ export const REGISTRATION_URLS = {
   master: 'https://forms.example.com/festival-master',
   partner: 'https://forms.example.com/festival-partner',
   tentCamp: 'https://forms.example.com/festival-tent-camp',
+  artist: 'https://forms.example.com/festival-artist',
 } as const;
 
-// ПЛЕЙСХОЛДЕРИ: реквізити ФОП, банка Monobank і URL надає організатор.
 export const DONATION = {
   monobankUrl: 'https://example.com/monobank-jar',
   fop: {
@@ -27,8 +26,7 @@ export const DONATION = {
   },
 } as const;
 
-// ПЛЕЙСХОЛДЕРИ: посилання на Instagram фестивалю та Google Maps надає організатор.
 export const CONTACTS = {
   instagramUrl: 'https://www.instagram.com/',
-  mapsUrl: 'https://www.google.com/maps',
+  mapsUrl: 'https://maps.app.goo.gl/ayqvhijWQr2V2xsh8',
 } as const;

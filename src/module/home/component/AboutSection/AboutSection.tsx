@@ -1,14 +1,20 @@
-import styles from './AboutSection.module.css';
+import { MESSAGES } from '@/data/messages';
+import s from './AboutSection.module.css';
 
 export function AboutSection() {
   return (
-    <section className={styles.section} aria-label="Про фестиваль">
-      <div className={styles.inner}>
-        <p className={styles.text}>
-          Veda Life Eco Village — фестиваль ведичної культури в Govinda Land, що
-          об'єднує гостей навколо духовних практик, знання, ярмарку та
-          живого спілкування на лоні природи.
-        </p>
+    <section
+      className={s.section}
+      id="about"
+      aria-label={MESSAGES.home.aboutSection.title}
+    >
+      <div className={s.inner}>
+        <h2 className={s.heading}>{MESSAGES.home.aboutSection.title}</h2>
+        {MESSAGES.home.aboutSection.text.map((text, index) => (
+          <p key={index} className={s.text}>
+            {text}
+          </p>
+        ))}
       </div>
     </section>
   );

@@ -18,8 +18,11 @@
 .text {
   font-size: 1.125rem;
   line-height: 1.75;
-  color: var(--color-text-main);
   margin: 0;
-  max-width: 52rem;
+  /* max-width: 52rem; */
   font-family: var(--font-serif-family);
+}
+
+.text + .text {
+  margin-top: 1.5rem;
 }

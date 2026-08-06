@@ -24,6 +24,10 @@
   --spacing-element-lg: 2rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans-family);
   color: var(--color-text-main);

@@ -1,24 +1,38 @@
 import { MapPin } from 'lucide-react';
 import { CONTACTS, FESTIVAL } from '@/data/festival';
 import { InstagramIcon } from '@/shared/component/InstagramIcon';
-import styles from './LocationSection.module.css';
+import s from './LocationSection.module.css';
 
 export function LocationSection() {
   return (
-    <section className={styles.section} aria-label="Локація та контакти">
-      <div className={styles.inner}>
-        <h2 className={styles.heading}>Локація та контакти</h2>
+    <section className={s.root} id="location" aria-label="Місце проведення">
+      <div className={s.inner}>
+        <h2 className={s.heading}>Місце проведення</h2>
+        <div className={s.description}>
+          <p>
+            Фестиваль проходитиме на території культурно-духовного центру
+            Ґовіндаленд — серед мальовничої природи, на території старовинного
+            замку, що вже понад століття зберігає свою особливу атмосферу та
+            історію.
+          </p>
+          <p>
+            Це місце, куди приїжджають, щоб відпочити від міської метушні,
+            відчути тепло щирого спілкування, красу природи й відкрити для себе
+            глибину ведичної культури. Саме тут панує атмосфера, яка робить
+            Vedalife Eco Village по-справжньому особливим.
+          </p>
+        </div>
 
-        <div className={styles.row}>
-          <p className={styles.address}>
+        <div className={s.row}>
+          <p className={s.address}>
             <MapPin size={20} aria-hidden="true" />
             {FESTIVAL.address}
           </p>
 
-          <div className={styles.actions}>
+          <div className={s.actions}>
             <a
               href={CONTACTS.mapsUrl}
-              className={styles.mapsBtn}
+              className={s.mapsBtn}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -26,7 +40,7 @@ export function LocationSection() {
             </a>
             <a
               href={CONTACTS.instagramUrl}
-              className={styles.instagramBtn}
+              className={s.instagramBtn}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -36,9 +50,7 @@ export function LocationSection() {
           </div>
         </div>
 
-        <p className={styles.note}>
-          Стежте за оновленнями фестивалю в Instagram.
-        </p>
+        <p className={s.note}>Стежте за оновленнями фестивалю в Instagram.</p>
       </div>
     </section>
   );

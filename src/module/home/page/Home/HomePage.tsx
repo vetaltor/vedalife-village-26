@@ -10,8 +10,8 @@ export function HomePage() {
       <HeroSection />
       <AboutSection />
       <RegistrationSection />
-      <DonationSection />
       <LocationSection />
+      <DonationSection />
     </>
   );
 }
