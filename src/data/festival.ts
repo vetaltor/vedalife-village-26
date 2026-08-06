@@ -7,13 +7,13 @@ export const FESTIVAL = {
 } as const;
 
 export const REGISTRATION_URLS = {
-  visitor: 'https://forms.example.com/festival-visitor',
-  volunteer: 'https://forms.example.com/festival-volunteer',
-  fair: 'https://forms.example.com/festival-fair',
-  master: 'https://forms.example.com/festival-master',
-  partner: 'https://forms.example.com/festival-partner',
-  tentCamp: 'https://forms.example.com/festival-tent-camp',
-  artist: 'https://forms.example.com/festival-artist',
+  visitor: 'https://forms.gle/67DrqvMAN8WuHxf38',
+  volunteer: 'https://forms.gle/ZqF4mzm5Y3chU4rx7',
+  fair: 'https://forms.gle/XscavCo9bQfW7vG29',
+  master: 'https://forms.gle/pRCh8DLsYe8RZbFX6',
+  // partner: 'https://forms.example.com/festival-partner',
+  // tentCamp: 'https://forms.example.com/festival-tent-camp',
+  artist: 'https://forms.gle/h3YkLZ3NU5xhGxsU8',
 } as const;
 
 export const DONATION = {
