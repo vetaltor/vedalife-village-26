@@ -2,7 +2,8 @@
 @import "modern-normalize/modern-normalize.css";
 
 :root {
-  --layout-max-width: 1100px;
+  --layout-max-width: 1400px;
+  --main-max-width: 1100px;
 
   /* Colors */
   --color-sage-light: #e5eab6;

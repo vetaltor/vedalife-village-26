@@ -3,7 +3,7 @@
 }
 
 .main {
-  max-width: var(--layout-max-width);
+  max-width: var(--main-max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
 }

@@ -1,7 +1,6 @@
 .root {
   padding: 2rem 1.5rem 0;
-  width: 100%;
-  max-width: 1400px;
+  max-width: var(--layout-max-width);
   margin: 0 auto;
 }
 
