@@ -70,7 +70,7 @@ const REGISTRATION_PATHS: RegistrationPath[] = [
 
 export function RegistrationSection() {
   return (
-    <section className={s.section} id="register" aria-label="Реєстрації">
+    <section className={s.root} id="register" aria-label="Реєстрації">
       <div className={s.inner}>
         <h2 className={s.heading}>Оберіть формат участі</h2>
         <p className={s.subheading}>

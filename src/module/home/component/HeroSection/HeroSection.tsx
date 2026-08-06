@@ -6,8 +6,6 @@ import s from './HeroSection.module.css';
 export function HeroSection() {
   return (
     <section className={s.root}>
-      <div className={s.decor} aria-hidden="true" />
-
       <h1 className={s.title}>{FESTIVAL.name}</h1>
       <p className={s.subtitle}>{FESTIVAL.subtitle}</p>
 

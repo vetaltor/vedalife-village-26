@@ -17,27 +17,6 @@
   }
 }
 
-.decor {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 28rem;
-  height: 28rem;
-  background-color: #d8dfaa;
-  opacity: 0.55;
-  border-radius: 9999px;
-  filter: blur(70px);
-  z-index: -1;
-}
-
-@media (min-width: 768px) {
-  .decor {
-    width: 36rem;
-    height: 36rem;
-  }
-}
-
 .dateBadge {
   display: inline-flex;
   align-items: center;
