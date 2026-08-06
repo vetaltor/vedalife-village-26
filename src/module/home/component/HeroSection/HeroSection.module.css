@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 1024px) {
-  .hero {
+  .root {
     min-height: calc(100vh - 10rem);
     padding: 3rem 0 5rem;
   }
@@ -63,6 +63,15 @@
   }
 }
 
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 2.25rem;
+}
+
 .location {
   display: inline-flex;
   align-items: center;
@@ -70,7 +79,7 @@
   gap: 0.5rem;
   color: var(--color-text-main);
   font-size: 0.875rem;
-  margin: 0 0 1.25rem;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -80,14 +89,14 @@
 }
 
 .freeEntry {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background-color: var(--color-cream);
   color: var(--color-olive-dark);
   font-size: 1rem;
   font-weight: 700;
   padding: 0.625rem 1.5rem;
   border-radius: 9999px;
-  margin: 0 0 2.25rem;
   border: 1px solid var(--color-olive-dark);
 }
 
@@ -101,7 +110,10 @@
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition:
+    background-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
   box-shadow:
     0 10px 15px -3px rgba(95, 114, 29, 0.25),
     0 4px 6px -4px rgba(95, 114, 29, 0.25);
@@ -109,4 +121,8 @@
 
 .ctaBtn:hover {
   background-color: var(--color-olive-hover);
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 20px -3px rgba(95, 114, 29, 0.3),
+    0 4px 6px -4px rgba(95, 114, 29, 0.25);
 }

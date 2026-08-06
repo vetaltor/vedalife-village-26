@@ -14,12 +14,13 @@ export function HeroSection() {
         {FESTIVAL.dates}
       </p>
 
-      <p className={s.location}>
-        <MapPin size={18} aria-hidden="true" />
-        {FESTIVAL.location}
-      </p>
-
-      {/* <p className={s.freeEntry}>Вхід вільний</p> */}
+      <div className={s.facts}>
+        {/* <p className={s.freeEntry}>Вхід вільний</p> */}
+        <p className={s.location}>
+          <MapPin size={18} aria-hidden="true" />
+          {FESTIVAL.location}
+        </p>
+      </div>
 
       <Link to="/#register" className={s.ctaBtn}>
         Зареєструватися
