@@ -4,6 +4,7 @@ import { Handshake, Mail, Phone, Send } from 'lucide-react';
 import { CONTACTS } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
 import { InstagramIcon } from '@/shared/component/InstagramIcon';
+import { SimpleCard } from '@/shared/component/SimpleCard';
 import s from './ContactsSection.module.css';
 
 type ContactChannel = {
@@ -62,14 +63,12 @@ export function ContactsSection() {
           {CHANNELS.map((channel) => {
             const Icon = channel.icon;
             return (
-              <div className={s.card} key={channel.id}>
-                <span className={s.iconWrapper}>
-                  <Icon size={22} aria-hidden="true" />
-                </span>
-                <div className={s.cardBody}>
-                  <h3 className={s.cardTitle}>{channel.title}</h3>
-                  <p className={s.cardText}>{channel.description}</p>
-                </div>
+              <SimpleCard
+                key={channel.id}
+                icon={<Icon size={22} aria-hidden="true" />}
+                title={channel.title}
+              >
+                <p className={s.cardText}>{channel.description}</p>
                 <a
                   href={channel.href}
                   className={s.btn}
@@ -78,52 +77,46 @@ export function ContactsSection() {
                 >
                   {channel.cta}
                 </a>
-              </div>
+              </SimpleCard>
             );
           })}
         </div>
 
         <div className={s.details}>
-          <div className={s.card}>
-            <span className={s.iconWrapper}>
-              <Mail size={22} aria-hidden="true" />
-            </span>
-            <div className={s.cardBody}>
-              <h3 className={s.cardTitle}>Email</h3>
-              <p className={s.cardText}>Для офіційних звернень:</p>
-              <a href={`mailto:${CONTACTS.email}`} className={s.linkBtn}>
-                {CONTACTS.email}
+          <SimpleCard
+            icon={<Mail size={22} aria-hidden="true" />}
+            title="Email"
+          >
+            <p className={s.cardText}>Для офіційних звернень:</p>
+            <a href={`mailto:${CONTACTS.email}`} className={s.linkBtn}>
+              {CONTACTS.email}
+            </a>
+          </SimpleCard>
+
+          <SimpleCard
+            icon={<Handshake size={22} aria-hidden="true" />}
+            title="Партнерство та спонсорство"
+          >
+            <p className={s.cardText}>
+              З питань партнерства, співпраці та спонсорської підтримки
+              звертайтеся до:
+            </p>
+            <div className={s.linkGroup}>
+              <a href={CONTACTS.partnership.phoneHref} className={s.linkBtn}>
+                <Phone size={16} aria-hidden="true" />
+                {CONTACTS.partnership.phone} ({CONTACTS.partnership.contact})
+              </a>
+              <a
+                href={CONTACTS.partnership.telegramUrl}
+                className={s.linkBtn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Send size={16} aria-hidden="true" />
+                {CONTACTS.partnership.telegramHandle}
               </a>
             </div>
-          </div>
-
-          <div className={s.card}>
-            <span className={s.iconWrapper}>
-              <Handshake size={22} aria-hidden="true" />
-            </span>
-            <div className={s.cardBody}>
-              <h3 className={s.cardTitle}>Партнерство та спонсорство</h3>
-              <p className={s.cardText}>
-                З питань партнерства, співпраці та спонсорської підтримки
-                звертайтеся до:
-              </p>
-              <div className={s.linkGroup}>
-                <a href={CONTACTS.partnership.phoneHref} className={s.linkBtn}>
-                  <Phone size={16} aria-hidden="true" />
-                  {CONTACTS.partnership.phone} ({CONTACTS.partnership.contact})
-                </a>
-                <a
-                  href={CONTACTS.partnership.telegramUrl}
-                  className={s.linkBtn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Send size={16} aria-hidden="true" />
-                  {CONTACTS.partnership.telegramHandle}
-                </a>
-              </div>
-            </div>
-          </div>
+          </SimpleCard>
         </div>
       </div>
     </section>

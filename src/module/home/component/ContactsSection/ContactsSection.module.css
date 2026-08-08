@@ -55,48 +55,12 @@
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  background-color: #fff;
-  border: 1px solid var(--color-sage-light);
-  border-radius: 1.25rem;
-  padding: 1.5rem;
-}
-
-.iconWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 3.25rem;
-  height: 3.25rem;
-  border-radius: 9999px;
-  background-color: var(--color-sage-light);
-  color: var(--color-olive-dark);
-}
-
-.cardBody {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  flex: 1;
-}
-
-.cardTitle {
-  font-family: var(--font-serif-family);
-  font-weight: 700;
-  font-size: 1.125rem;
-  color: var(--color-deep-purple);
-  margin: 0;
-}
-
 .cardText {
   color: var(--color-text-muted);
   font-size: 0.875rem;
   line-height: 1.6;
   margin: 0;
+  margin-bottom: 0.75rem;
 }
 
 .btn {
