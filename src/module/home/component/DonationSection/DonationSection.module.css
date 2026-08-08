@@ -46,7 +46,6 @@
   color: var(--color-text-muted);
   line-height: 1.7;
   margin: 0 0 2rem;
-  max-width: 46rem;
 }
 
 .cards {

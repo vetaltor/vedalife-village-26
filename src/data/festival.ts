@@ -27,6 +27,16 @@ export const DONATION = {
 } as const;
 
 export const CONTACTS = {
-  instagramUrl: 'https://www.instagram.com/',
+  instagramUrl: 'https://www.instagram.com/vedalife_eco_village/',
   mapsUrl: 'https://maps.app.goo.gl/ayqvhijWQr2V2xsh8',
+  telegramChannelUrl: 'https://t.me/vedalifegovindaland',
+  telegramCommunityUrl: 'https://t.me/vedalifegovindaland2026',
+  email: 'vedalifecovill@gmail.com',
+  partnership: {
+    contact: 'Сергій',
+    phone: '+38 (099) 197-54-01',
+    phoneHref: 'tel:+380991975401',
+    telegramHandle: '@ananda_madhav_mj',
+    telegramUrl: 'https://t.me/ananda_madhav_mj',
+  },
 } as const;
