@@ -88,9 +88,11 @@ export function ContactsSection() {
             title="Email"
           >
             <p className={s.cardText}>Для офіційних звернень:</p>
-            <a href={`mailto:${CONTACTS.email}`} className={s.linkBtn}>
-              {CONTACTS.email}
-            </a>
+            <div className={s.linkGroup}>
+              <a href={`mailto:${CONTACTS.email}`} className={s.linkBtn}>
+                {CONTACTS.email}
+              </a>
+            </div>
           </SimpleCard>
 
           <SimpleCard
