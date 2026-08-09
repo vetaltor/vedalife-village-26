@@ -1,0 +1,238 @@
+.root {
+  padding: 0 0 var(--spacing-section-y);
+}
+
+.inner {
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-sage-light);
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(28, 14, 48, 0.06);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding: 3rem;
+  }
+}
+
+.heading {
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-deep-purple);
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+.addressCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background-color: #fff;
+  border: 1px solid var(--color-sage-light);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .addressCard {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 9999px;
+  background-color: var(--color-sage-light);
+  color: var(--color-olive-dark);
+}
+
+.addressText {
+  flex: 1;
+}
+
+.addressTitle {
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-deep-purple);
+  margin: 0;
+}
+
+.addressNote {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin: 0.25rem 0 0;
+}
+
+.addressSub {
+  font-size: 0.9375rem;
+  color: var(--color-text-main);
+  margin: 0.5rem 0 0;
+}
+
+.mapBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-olive-dark);
+  color: var(--color-text-inverse);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.mapBtn:hover {
+  background-color: var(--color-olive-hover);
+}
+
+.mapBtn:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
+
+.subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-deep-purple);
+  margin: 0 0 1.25rem;
+}
+
+.subheading svg {
+  color: var(--color-olive-dark);
+}
+
+.routes {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .routes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.routeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fff;
+  border: 1px solid var(--color-sage-light);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+
+.routeCard > p,
+.routeCard .hint {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.routeCardAccent {
+  background-color: var(--color-sage-light);
+  border-color: var(--color-olive-dark);
+}
+
+.routeTitle {
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-deep-purple);
+  margin: 0;
+}
+
+.schedule {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--color-olive-dark);
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.transferCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--color-deep-purple);
+  color: var(--color-text-inverse);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.transferIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: rgba(229, 234, 182, 0.15);
+  color: var(--color-sage-light);
+}
+
+.transferTitle {
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0 0 0.5rem;
+}
+
+.transferCard p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  color: #e6e3ea;
+}
+
+.transferCard .transferNote {
+  color: #d1d5db;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.help {
+  text-align: center;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 2.5rem 0 0;
+}
+
+.help strong {
+  color: var(--color-olive-dark);
+}

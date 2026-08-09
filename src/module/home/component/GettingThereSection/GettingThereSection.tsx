@@ -1,0 +1,100 @@
+import clsx from 'clsx';
+import { Bus, Car, Clock3, MapPin } from 'lucide-react';
+import { CONTACTS, FESTIVAL } from '@/data/festival';
+import { LayoutStyles } from '@/module/app/component/Layout';
+import s from './GettingThereSection.module.css';
+
+export function GettingThereSection() {
+  return (
+    <section
+      className={clsx(s.root, LayoutStyles.fixedWidth)}
+      id="getting-there"
+      aria-label="Як дістатися"
+    >
+      <div className={s.inner}>
+        <h2 className={s.heading}>Як дістатися</h2>
+
+        <div className={s.addressCard}>
+          <span className={s.iconWrapper} aria-hidden="true">
+            <MapPin size={24} />
+          </span>
+          <div className={s.addressText}>
+            <p className={s.addressTitle}>Маєток «Ґовіндаленд»</p>
+            <p className={s.addressNote}>(маєток генерала Заботіна)</p>
+            <p className={s.addressSub}>Вінницька область, с. Мала Ростівка</p>
+          </div>
+          <a
+            href={CONTACTS.mapsUrl}
+            className={s.mapBtn}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Локація на карті
+          </a>
+        </div>
+
+        <h3 className={s.subheading}>
+          <Bus size={22} aria-hidden="true" />
+          Громадським транспортом
+        </h3>
+
+        <div className={s.routes}>
+          <article className={clsx(s.routeCard)}>
+            <h4 className={s.routeTitle}>З Києва</h4>
+            <p>
+              Відправлення з <strong>автостанції «Південна»</strong> (станція
+              метро <strong>«Іподром»</strong>) автобусом
+              <strong> «Київ — Чагів»</strong>.
+            </p>
+            <p className={s.schedule}>
+              <Clock3 size={16} aria-hidden="true" />
+              Час відправлення: 08:00, 14:30, 16:50.
+            </p>
+            <p className={s.hint}>
+              Актуальний розклад рекомендуємо уточнювати на автостанції.
+            </p>
+            <p>
+              Вийдіть на зупинці <strong>«Чагів»</strong>.
+            </p>
+          </article>
+
+          <article className={s.routeCard}>
+            <h4 className={s.routeTitle}>З Вінниці</h4>
+            <p>
+              Відправлення з <strong>автостанції «Східна»</strong> (вул.
+              Ватутіна, 18) автобусом <strong>«Вінниця — Чагів»</strong>.
+            </p>
+            <p className={s.hint}>
+              Актуальний розклад рекомендуємо уточнювати на автостанції.
+            </p>
+            <p>
+              Вийдіть на зупинці <strong>«Чагів»</strong>.
+            </p>
+          </article>
+        </div>
+
+        <div className={s.transferCard}>
+          <span className={s.transferIcon} aria-hidden="true">
+            <Car size={22} />
+          </span>
+          <div>
+            <h3 className={s.transferTitle}>Трансфер до фестивалю</h3>
+            <p>
+              У дні проведення {FESTIVAL.name} від зупинки «Чагів» до маєтку
+              «Ґовиндаленд» курсуватиме <strong>безкоштовний трансфер</strong>.
+            </p>
+            <p className={s.transferNote}>
+              Графік трансферу буде опубліковано ближче до початку фестивалю.
+            </p>
+          </div>
+        </div>
+
+        <p className={s.help}>
+          Не знайшли зручний маршрут або виникли запитання?{' '}
+          <strong>Зв'яжіться з нами</strong> — ми із задоволенням допоможемо
+          спланувати вашу поїздку.
+        </p>
+      </div>
+    </section>
+  );
+}

@@ -17,7 +17,7 @@ export function HeroSection() {
         </p>
 
         <div className={s.facts}>
-          {/* <p className={s.freeEntry}>Вхід вільний</p> */}
+          <p className={s.freeEntry}>Вхід вільний</p>
           <p className={s.location}>
             <MapPin size={18} aria-hidden="true" />
             {FESTIVAL.location}

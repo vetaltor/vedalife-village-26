@@ -23,15 +23,9 @@
   top: 0;
   left: 0;
   z-index: -1;
-  /* background-image:
-    linear-gradient(
-      rgba(var(--color-olive-dark), 0.5),
-      rgba(var(--color-olive-dark), 0.5)
-    ),
-    url("/vedalife-village-26/hero5.jpg");*/
   background-size: cover;
   background-position: center;
-  background-image: url("/vedalife-village-26/hero10.jpg");
+  background-image: url("@/assets/images/hero9.jpg");
   opacity: 0.8;
   /* filter: blur(3px); */
   /* filter: brightness(0.9); */
