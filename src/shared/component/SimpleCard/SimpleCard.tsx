@@ -7,6 +7,7 @@ export type SimpleCardProps = {
   children: ReactNode;
   actions?: ReactNode;
   columnLayout?: boolean;
+  className?: string;
 };
 
 export function SimpleCard({
@@ -14,9 +15,12 @@ export function SimpleCard({
   children,
   actions,
   columnLayout = false,
+  className,
 }: SimpleCardProps) {
   return (
-    <div className={clsx(s.root, columnLayout ? s.rootColumn : s.rootDefault)}>
+    <div
+      className={clsx(s.root, columnLayout ? s.rootColumn : s.rootDefault, className)}
+    >
       <div className={s.iconWrapper}>{icon}</div>
       <div className={s.body}>{children}</div>
       {actions ? <div className={s.actions}>{actions}</div> : null}
