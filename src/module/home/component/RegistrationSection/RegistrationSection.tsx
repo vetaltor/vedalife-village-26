@@ -1,17 +1,16 @@
 import clsx from 'clsx';
 import {
-  ArrowUpRight,
-  Handshake,
   HeartHandshake,
   MicVocal,
   Palette,
   Sparkles,
   Store,
-  Tent,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import visitFestImage from '@/assets/images/visitor-reg.webp';
 import { FESTIVAL, REGISTRATION_URLS } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
+import { RegistrationPathCard } from './RegistrationPathCard';
 import s from './RegistrationSection.module.css';
 
 type RegistrationPath = {
@@ -19,6 +18,7 @@ type RegistrationPath = {
   title: string;
   description: string;
   icon: LucideIcon;
+  backgroundImage?: string;
 };
 
 const REGISTRATION_PATHS: RegistrationPath[] = [
@@ -27,6 +27,7 @@ const REGISTRATION_PATHS: RegistrationPath[] = [
     title: 'Відвідати фестиваль',
     description: 'Приїжджайте та пориньте в атмосферу фестивалю.',
     icon: Sparkles,
+    backgroundImage: visitFestImage,
   },
   {
     id: 'volunteer',
@@ -84,34 +85,16 @@ export function RegistrationSection() {
         </p>
 
         <ul className={s.grid}>
-          {REGISTRATION_PATHS.map((path) => {
-            const Icon = path.icon;
-            return (
-              <li key={path.id}>
-                <a
-                  href={REGISTRATION_URLS[path.id]}
-                  className={s.card}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={s.iconWrapper}>
-                    <Icon size={24} aria-hidden="true" />
-                  </span>
-                  <span className={s.cardContent}>
-                    <span className={s.cardTitle}>{path.title}</span>
-                    <span className={s.cardDescription}>
-                      {path.description}
-                    </span>
-                  </span>
-                  <ArrowUpRight
-                    className={s.arrow}
-                    size={20}
-                    aria-hidden="true"
-                  />
-                </a>
-              </li>
-            );
-          })}
+          {REGISTRATION_PATHS.map((path) => (
+            <RegistrationPathCard
+              key={path.id}
+              href={REGISTRATION_URLS[path.id]}
+              title={path.title}
+              description={path.description}
+              icon={path.icon}
+              backgroundImage={path.backgroundImage}
+            />
+          ))}
         </ul>
       </div>
     </section>

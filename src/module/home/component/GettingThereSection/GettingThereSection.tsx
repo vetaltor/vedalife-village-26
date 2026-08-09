@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { Bus, Car, Clock3, MapPin } from 'lucide-react';
+import locationImg from '@/assets/images/location.webp';
 import { CONTACTS, FESTIVAL } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
 import s from './GettingThereSection.module.css';
@@ -8,11 +9,33 @@ export function GettingThereSection() {
   return (
     <section
       className={clsx(s.root, LayoutStyles.fixedWidth)}
-      id="getting-there"
+      id="location"
       aria-label="Як дістатися"
     >
       <div className={s.inner}>
         <h2 className={s.heading}>Як дістатися</h2>
+
+        <div className={s.description}>
+          <div className={s.descriptionText}>
+            <p>
+              Фестиваль проходитиме на території культурно-духовного центру
+              Ґовиндаленд — серед мальовничої природи, на території старовинного
+              замку, що вже понад століття зберігає свою особливу атмосферу та
+              історію.
+            </p>
+            <p>
+              Це місце, куди приїжджають, щоб відпочити від міської метушні,
+              відчути тепло щирого спілкування, красу природи й відкрити для
+              себе глибину ведичної культури. Саме тут панує атмосфера, яка
+              робить Vedalife Eco Village по-справжньому особливим.
+            </p>
+          </div>
+          <img
+            src={locationImg}
+            alt="Маєток Ґовіндаленд — мальовнича територія фестивалю"
+            className={s.descriptionImage}
+          />
+        </div>
 
         <div className={s.addressCard}>
           <span className={s.iconWrapper} aria-hidden="true">
