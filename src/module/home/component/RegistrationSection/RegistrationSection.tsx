@@ -1,6 +1,13 @@
 import clsx from 'clsx';
-import { HeartHandshake, MicVocal, Palette, Sparkles, Store } from 'lucide-react';
+import {
+  HeartHandshake,
+  MicVocal,
+  Palette,
+  Sparkles,
+  Store,
+} from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import visitFestImage from '@/assets/images/visitor-reg.webp';
 import { FESTIVAL, REGISTRATION_URLS } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
 import { RegistrationPathCard } from './RegistrationPathCard';
@@ -11,6 +18,7 @@ type RegistrationPath = {
   title: string;
   description: string;
   icon: LucideIcon;
+  backgroundImage?: string;
 };
 
 const REGISTRATION_PATHS: RegistrationPath[] = [
@@ -19,6 +27,7 @@ const REGISTRATION_PATHS: RegistrationPath[] = [
     title: 'Відвідати фестиваль',
     description: 'Приїжджайте та пориньте в атмосферу фестивалю.',
     icon: Sparkles,
+    backgroundImage: visitFestImage,
   },
   {
     id: 'volunteer',
@@ -83,6 +92,7 @@ export function RegistrationSection() {
               title={path.title}
               description={path.description}
               icon={path.icon}
+              backgroundImage={path.backgroundImage}
             />
           ))}
         </ul>

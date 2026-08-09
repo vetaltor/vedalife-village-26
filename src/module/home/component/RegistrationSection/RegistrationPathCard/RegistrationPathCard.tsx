@@ -1,6 +1,7 @@
+import type { CSSProperties } from 'react';
+import clsx from 'clsx';
 import { ArrowUpRight } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { SimpleCard } from '@/shared/component/SimpleCard';
 import s from './RegistrationPathCard.module.css';
 
 export type RegistrationPathCardProps = {
@@ -8,6 +9,7 @@ export type RegistrationPathCardProps = {
   title: string;
   description: string;
   icon: LucideIcon;
+  backgroundImage?: string;
 };
 
 export function RegistrationPathCard({
@@ -15,7 +17,13 @@ export function RegistrationPathCard({
   title,
   description,
   icon: Icon,
+  backgroundImage,
 }: RegistrationPathCardProps) {
+  const hasBackgroundImage = Boolean(backgroundImage);
+  const cardStyle: CSSProperties | undefined = backgroundImage
+    ? { backgroundImage: `url(${backgroundImage})` }
+    : undefined;
+
   return (
     <li>
       <a
@@ -24,14 +32,19 @@ export function RegistrationPathCard({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SimpleCard
-          className={s.card}
-          icon={<Icon size={24} aria-hidden="true" />}
+        <div
+          className={clsx(s.card, hasBackgroundImage && s.cardWithImage)}
+          style={cardStyle}
         >
-          <SimpleCard.Title>{title}</SimpleCard.Title>
+          <div className={s.cardHeader}>
+            <h3 className={s.cardTitle}>{title}</h3>
+            <div className={s.iconWrapper}>
+              <Icon size={24} aria-hidden="true" />
+            </div>
+          </div>
           <p className={s.cardDescription}>{description}</p>
           <ArrowUpRight className={s.arrow} size={20} aria-hidden="true" />
-        </SimpleCard>
+        </div>
       </a>
     </li>
   );
