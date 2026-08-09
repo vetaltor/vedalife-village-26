@@ -39,7 +39,7 @@ export function GettingThereSection() {
         </h3>
 
         <div className={s.routes}>
-          <article className={clsx(s.routeCard, s.routeCardAccent)}>
+          <article className={clsx(s.routeCard)}>
             <h4 className={s.routeTitle}>З Києва</h4>
             <p>
               Відправлення з <strong>автостанції «Південна»</strong> (станція

@@ -59,65 +59,73 @@ export function ContactsSection() {
           Маєте запитання щодо фестивалю? Ми завжди раді допомогти!
         </p>
 
-        <div className={s.channels}>
+        <div className={s.cardList}>
           {CHANNELS.map((channel) => {
             const Icon = channel.icon;
             return (
               <SimpleCard
                 key={channel.id}
-                icon={<Icon size={22} aria-hidden="true" />}
-                title={channel.title}
+                icon={<Icon size={24} aria-hidden="true" />}
+                columnLayout
+                actions={
+                  <a
+                    href={channel.href}
+                    className={s.btn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {channel.cta}
+                  </a>
+                }
               >
+                <SimpleCard.Title>{channel.title}</SimpleCard.Title>
                 <p className={s.cardText}>{channel.description}</p>
-                <a
-                  href={channel.href}
-                  className={s.btn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {channel.cta}
-                </a>
               </SimpleCard>
             );
           })}
-        </div>
 
-        <div className={s.details}>
           <SimpleCard
-            icon={<Mail size={22} aria-hidden="true" />}
-            title="Email"
-          >
-            <p className={s.cardText}>Для офіційних звернень:</p>
-            <div className={s.linkGroup}>
+            icon={<Mail size={24} aria-hidden="true" />}
+            columnLayout
+            actions={
               <a href={`mailto:${CONTACTS.email}`} className={s.linkBtn}>
                 {CONTACTS.email}
               </a>
-            </div>
+            }
+          >
+            <SimpleCard.Title>Email</SimpleCard.Title>
+            <p className={s.cardText}>Для офіційних звернень:</p>
           </SimpleCard>
 
           <SimpleCard
-            icon={<Handshake size={22} aria-hidden="true" />}
-            title="Партнерство та спонсорство"
+            icon={<Handshake size={24} aria-hidden="true" />}
+            columnLayout
+            actions={
+              <>
+                <a
+                  href={CONTACTS.partnership.phoneHref}
+                  className={s.linkBtn}
+                >
+                  <Phone size={16} aria-hidden="true" />
+                  {CONTACTS.partnership.phone} ({CONTACTS.partnership.contact})
+                </a>
+                <a
+                  href={CONTACTS.partnership.telegramUrl}
+                  className={s.linkBtn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Send size={16} aria-hidden="true" />
+                  {CONTACTS.partnership.telegramHandle}
+                </a>
+              </>
+            }
           >
+            <SimpleCard.Title>Партнерство та спонсорство</SimpleCard.Title>
             <p className={s.cardText}>
               З питань партнерства, співпраці та спонсорської підтримки
               звертайтеся до:
             </p>
-            <div className={s.linkGroup}>
-              <a href={CONTACTS.partnership.phoneHref} className={s.linkBtn}>
-                <Phone size={16} aria-hidden="true" />
-                {CONTACTS.partnership.phone} ({CONTACTS.partnership.contact})
-              </a>
-              <a
-                href={CONTACTS.partnership.telegramUrl}
-                className={s.linkBtn}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Send size={16} aria-hidden="true" />
-                {CONTACTS.partnership.telegramHandle}
-              </a>
-            </div>
           </SimpleCard>
         </div>
       </div>

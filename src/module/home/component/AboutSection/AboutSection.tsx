@@ -10,6 +10,7 @@ import {
   ShoppingBag,
   Sparkles,
 } from 'lucide-react';
+import ornament from '@/assets/images/ornament.svg';
 import { FESTIVAL } from '@/data/festival';
 import { MESSAGES } from '@/data/messages';
 import { LayoutStyles } from '@/module/app/component/Layout';
@@ -39,12 +40,7 @@ export function AboutSection() {
       aria-label={MESSAGES.home.aboutSection.title}
     >
       <div className={s.inner}>
-        <img
-          src={getPublicAsset('ornament.svg')}
-          alt=""
-          className={s.ornament}
-          aria-hidden="true"
-        />
+        <img className={s.ornament} src={ornament} alt="" aria-hidden="true" />
 
         <Sparkles className={s.sparkle} aria-hidden="true" />
 

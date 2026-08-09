@@ -1,20 +1,35 @@
 import type { ReactNode } from 'react';
+import clsx from 'clsx';
 import s from './SimpleCard.module.css';
 
-type SimpleCardProps = {
+export type SimpleCardProps = {
   icon: ReactNode;
-  title: string;
   children: ReactNode;
+  actions?: ReactNode;
+  columnLayout?: boolean;
 };
 
-export function SimpleCard({ icon, title, children }: SimpleCardProps) {
+export function SimpleCard({
+  icon,
+  children,
+  actions,
+  columnLayout = false,
+}: SimpleCardProps) {
   return (
-    <div className={s.root}>
-      <div className={s.header}>
-        <span className={s.iconWrapper}>{icon}</span>
-        <h3 className={s.cardTitle}>{title}</h3>
-      </div>
+    <div className={clsx(s.root, columnLayout ? s.rootColumn : s.rootDefault)}>
+      <div className={s.iconWrapper}>{icon}</div>
       <div className={s.body}>{children}</div>
+      {actions ? <div className={s.actions}>{actions}</div> : null}
     </div>
   );
+}
+
+export namespace SimpleCard {
+  export type TitleProps = {
+    children: ReactNode;
+  };
+
+  export function Title({ children }: TitleProps) {
+    return <h3 className={s.cardTitle}>{children}</h3>;
+  }
 }
