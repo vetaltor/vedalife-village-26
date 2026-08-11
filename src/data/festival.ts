@@ -2,7 +2,7 @@ export const FESTIVAL = {
   name: 'Vedalife Eco Village',
   subtitle: 'Фестиваль ведичної культури в Ґовіндаленді',
   dates: '22 – 23 серпня',
-  location: 'Govindaland, с. Мала Ростівка, Вінницька область',
+  location: 'с. Мала Ростівка, Вінницька область',
   address: 'с. Мала Ростівка, Вінницька область',
 } as const;
 

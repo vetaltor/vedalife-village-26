@@ -52,6 +52,7 @@ export function AppHeader() {
           onClick={() => setIsMenuOpen(true)}
         >
           <Menu aria-hidden="true" />
+          <span className={s.menuToggleText}>Меню</span>
         </button>
         {/* <Link to={ROUTES.home} className={s.brand}>
           {FESTIVAL.name}

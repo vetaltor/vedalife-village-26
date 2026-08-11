@@ -12,6 +12,7 @@
 }
 
 .root {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -19,7 +20,7 @@
   border: 1px solid var(--color-sage-light);
   border-radius: 1.25rem;
   height: 100%;
-  padding: 1.5rem;
+  padding: 2rem;
   box-shadow: 0 10px 15px -3px rgba(28, 14, 48, 0.05);
   transition:
     border-color 0.2s,
@@ -107,6 +108,9 @@
 }
 
 .linkIconWrapper {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

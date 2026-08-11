@@ -23,7 +23,7 @@ export function HeroSection() {
           <Badge icon={<MapPin size={18} aria-hidden="true" />}>
             {FESTIVAL.location}
           </Badge>
-          <Badge variant="featured">Вхід вільний</Badge>
+          <Badge>Вхід вільний</Badge>
         </div>
 
         <Link to="/#register" className={s.ctaBtn}>

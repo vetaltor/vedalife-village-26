@@ -45,7 +45,7 @@
     padding: 0.85rem 2.5rem;
     background-color: hsl(from var(--color-cream) h s l / 0.9);
     border-radius: 100vw;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-olive-dark);
     font-size: 1rem;
     font-weight: 500;
   }
@@ -106,7 +106,6 @@
   border-color: var(--color-olive-hover);
 }
 
-.menuToggle,
 .menuClose {
   display: inline-flex;
   align-items: center;
@@ -122,9 +121,34 @@
   transition: background-color 0.2s;
 }
 
-.menuToggle:hover,
-.menuClose:hover {
-  background-color: var(--color-sage-light);
+.menuToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color-sage-light);
+  border-radius: 100vw;
+  background-color: hsl(0 0% 100% / 0.8);
+  backdrop-filter: blur(8px);
+  color: var(--color-olive-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.menuToggle:hover {
+  background-color: hsl(0 0% 100% / 0.95);
+  border-color: var(--color-olive-dark);
+  box-shadow: 0 0.125rem 0.5rem hsl(0 0% 0% / 0.08);
+}
+
+.menuToggleText {
+  line-height: 1;
 }
 
 .menuClose {
