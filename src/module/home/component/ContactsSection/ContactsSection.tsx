@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { Handshake, Mail, Phone, Send } from 'lucide-react';
 import { CONTACTS } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
+import { Button } from '@/shared/component/Button';
 import { InstagramIcon } from '@/shared/component/InstagramIcon';
 import { SimpleCard } from '@/shared/component/SimpleCard';
 import s from './ContactsSection.module.css';
@@ -68,14 +69,14 @@ export function ContactsSection() {
                 icon={<Icon size={24} aria-hidden="true" />}
                 columnLayout
                 actions={
-                  <a
+                  <Button
+                    as="link"
                     href={channel.href}
-                    className={s.btn}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     {channel.cta}
-                  </a>
+                  </Button>
                 }
               >
                 <SimpleCard.Title>{channel.title}</SimpleCard.Title>
@@ -88,9 +89,13 @@ export function ContactsSection() {
             icon={<Mail size={24} aria-hidden="true" />}
             columnLayout
             actions={
-              <a href={`mailto:${CONTACTS.email}`} className={s.linkBtn}>
+              <Button
+                as="link"
+                variant="secondary"
+                href={`mailto:${CONTACTS.email}`}
+              >
                 {CONTACTS.email}
-              </a>
+              </Button>
             }
           >
             <SimpleCard.Title>Email</SimpleCard.Title>
@@ -102,22 +107,24 @@ export function ContactsSection() {
             columnLayout
             actions={
               <>
-                <a
+                <Button
+                  as="link"
+                  variant="secondary"
                   href={CONTACTS.partnership.phoneHref}
-                  className={s.linkBtn}
+                  icon={<Phone size={16} aria-hidden="true" />}
                 >
-                  <Phone size={16} aria-hidden="true" />
                   {CONTACTS.partnership.phone} ({CONTACTS.partnership.contact})
-                </a>
-                <a
+                </Button>
+                <Button
+                  as="link"
+                  variant="secondary"
                   href={CONTACTS.partnership.telegramUrl}
-                  className={s.linkBtn}
                   target="_blank"
                   rel="noopener noreferrer"
+                  icon={<Send size={16} aria-hidden="true" />}
                 >
-                  <Send size={16} aria-hidden="true" />
                   {CONTACTS.partnership.telegramHandle}
-                </a>
+                </Button>
               </>
             }
           >

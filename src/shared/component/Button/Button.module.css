@@ -1,0 +1,56 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-olive-dark);
+  color: var(--color-text-inverse);
+  transition: background-color 0.2s;
+}
+
+.primary:hover {
+  background-color: var(--color-olive-hover);
+}
+
+.primary:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
+
+.secondary {
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--color-olive-dark);
+  background: transparent;
+  color: var(--color-olive-dark);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.secondary:hover {
+  background-color: var(--color-olive-dark);
+  color: var(--color-text-inverse);
+}
+
+.secondary:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}

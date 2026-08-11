@@ -3,6 +3,7 @@ import { Bus, Car, Clock3, MapPin } from 'lucide-react';
 import locationImg from '@/assets/images/location.webp';
 import { CONTACTS, FESTIVAL } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
+import { Button } from '@/shared/component/Button';
 import s from './GettingThereSection.module.css';
 
 export function GettingThereSection() {
@@ -46,14 +47,14 @@ export function GettingThereSection() {
             <p className={s.addressNote}>(маєток генерала Заботіна)</p>
             <p className={s.addressSub}>Вінницька область, с. Мала Ростівка</p>
           </div>
-          <a
+          <Button
+            as="link"
             href={CONTACTS.mapsUrl}
-            className={s.mapBtn}
             target="_blank"
             rel="noopener noreferrer"
           >
             Локація на карті
-          </a>
+          </Button>
         </div>
 
         <h3 className={s.subheading}>

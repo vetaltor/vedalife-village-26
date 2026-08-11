@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
+import { Button } from '@/shared/component/Button';
 import { Card } from '../../Card';
 import s from './PrivatBankCard.module.css';
 
@@ -30,24 +31,23 @@ export function PrivatBankCard() {
           <dd>{CARD_NUMBER}</dd>
         </div>
       </dl>
-      <button
+      <Button
+        as="button"
         type="button"
-        className={s.copyBtn}
+        variant="secondary"
         onClick={copyToClipboard}
-        aria-live="polite"
-      >
-        {copied ? (
-          <>
+        ariaLive="polite"
+        className={s.pinned}
+        icon={
+          copied ? (
             <Check size={18} aria-hidden="true" />
-            Скопійовано
-          </>
-        ) : (
-          <>
+          ) : (
             <Copy size={18} aria-hidden="true" />
-            Скопіювати реквізити
-          </>
-        )}
-      </button>
+          )
+        }
+      >
+        {copied ? 'Скопійовано' : 'Скопіювати реквізити'}
+      </Button>
     </Card>
   );
 }

@@ -4,15 +4,15 @@
   align-items: center;
   text-align: center;
   padding: 2.5rem 0 4rem;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 5rem);
   justify-content: center;
   overflow: hidden;
 }
 
 @media (min-width: 1024px) {
   .root {
-    min-height: calc(100vh - 8rem);
-    padding: 3rem 0 5rem;
+    min-height: calc(100vh - 5rem);
+    padding: 3rem 0 6rem;
   }
 }
 
