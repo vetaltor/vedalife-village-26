@@ -1,0 +1,17 @@
+.root {
+  background-color: #fff;
+  border: 1px solid #e5eab6;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-deep-purple);
+  margin: 0;
+}
