@@ -99,6 +99,13 @@
   }
 }
 
+@media (max-width: 400px) {
+  .root_withImage .description,
+  .root_withImage .header {
+    width: 100%;
+  }
+}
+
 .linkIconWrapper {
   display: flex;
   align-items: center;
