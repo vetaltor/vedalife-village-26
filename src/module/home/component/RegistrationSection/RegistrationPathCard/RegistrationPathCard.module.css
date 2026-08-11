@@ -1,4 +1,4 @@
-.cardLink {
+.link {
   display: block;
   height: 100%;
   color: inherit;
@@ -6,12 +6,12 @@
   border-radius: 1.25rem;
 }
 
-.cardLink:focus-visible {
+.link:focus-visible {
   outline: 2px solid var(--color-olive-dark);
   outline-offset: 2px;
 }
 
-.card {
+.root {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -31,21 +31,21 @@
   min-height: 15rem;
 }
 
-.cardWithImage {
+.root_withImage {
   background-color: var(--color-cream);
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.cardHeader {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.cardWithImage .cardHeader {
+.root_withImage .header {
   width: 55%;
   margin-left: auto;
 }
@@ -62,44 +62,59 @@
   color: var(--color-olive-dark);
 }
 
-.cardTitle {
+.title {
   margin: 0;
   font-family: var(--font-serif-family);
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--color-deep-purple);
 }
 
-.cardLink:hover .card {
+.link:hover .root {
   border-color: var(--color-olive-dark);
   background-color: #fff;
   transform: translateY(-2px);
 }
 
-.cardLink:hover .cardWithImage {
+.link:hover .root_withImage {
   background-color: var(--color-cream);
 }
 
-.cardDescription {
+.description {
   /* color: var(--color-text-muted); */
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.55;
   margin: 0;
 }
 
-.cardWithImage .cardDescription {
+.root_withImage .description {
   width: 55%;
   margin-left: auto;
 }
 
-.arrow {
-  color: var(--color-olive-dark);
+@media (max-width: 1100px) {
+  .root_withImage .description,
+  .root_withImage .header {
+    width: 65%;
+  }
+}
+
+.linkIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-end;
+  width: 40px;
+  height: 40px;
   margin-top: auto;
+  background-color: var(--color-cream);
+  opacity: 0.8;
+  border-radius: 50%;
+  color: var(--color-olive-dark);
   transition: transform 0.2s;
 }
 
-.cardLink:hover .card .arrow {
+.link:hover .linkIconWrapper {
   transform: translate(2px, -2px);
 }
 

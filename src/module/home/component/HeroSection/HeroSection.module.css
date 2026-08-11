@@ -63,7 +63,6 @@
   letter-spacing: -0.02em;
   color: var(--color-deep-purple);
   margin: 0 0 1rem;
-  max-width: 16ch;
   text-wrap: balance;
 }
 

@@ -1,13 +1,10 @@
 import clsx from 'clsx';
-import {
-  HeartHandshake,
-  MicVocal,
-  Palette,
-  Sparkles,
-  Store,
-} from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import artistImage from '@/assets/images/artists-reg.webp';
+import fairImage from '@/assets/images/fair-reg.webp';
+import masterImage from '@/assets/images/masters-reg.webp';
 import visitFestImage from '@/assets/images/visitor-reg.webp';
+import volunteerImage from '@/assets/images/volunteer-reg.webp';
 import { FESTIVAL, REGISTRATION_URLS } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
 import { RegistrationPathCard } from './RegistrationPathCard';
@@ -17,7 +14,7 @@ type RegistrationPath = {
   id: keyof typeof REGISTRATION_URLS;
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon?: LucideIcon;
   backgroundImage?: string;
 };
 
@@ -26,7 +23,7 @@ const REGISTRATION_PATHS: RegistrationPath[] = [
     id: 'visitor',
     title: 'Відвідати фестиваль',
     description: 'Приїжджайте та пориньте в атмосферу фестивалю.',
-    icon: Sparkles,
+    // icon: Sparkles,
     backgroundImage: visitFestImage,
   },
   {
@@ -34,41 +31,33 @@ const REGISTRATION_PATHS: RegistrationPath[] = [
     title: 'Стати волонтером',
     description:
       'Станьте частиною команди та допоможіть створити особливу подію.',
-    icon: HeartHandshake,
+    // icon: HeartHandshake,
+    backgroundImage: volunteerImage,
   },
   {
     id: 'fair',
     title: 'Участь у ярмарку',
     description:
       'Запрошуємо майстрів, ремісників і виробників натуральної продукції представити свої вироби на фестивалі.',
-    icon: Store,
+    // icon: Store,
+    backgroundImage: fairImage,
   },
   {
     id: 'master',
     title: 'Майстри та лектори',
     description:
       'Проводите лекції, йогу, майстер-класи, оздоровчі практики, консультації чи ігри? Запрошуємо стати частиною фестивальної програми.',
-    icon: Palette,
+    // icon: Palette,
+    backgroundImage: masterImage,
   },
   {
     id: 'artist',
     title: 'Артисти та колективи',
     description:
       'Запрошуємо музикантів, виконавців та творчі колективи долучитися до музичної програми.',
-    icon: MicVocal,
+    // icon: MicVocal,
+    backgroundImage: artistImage,
   },
-  // {
-  //   id: 'partner',
-  //   title: 'Стати партнером',
-  //   description: 'Підтримайте фестиваль як партнер чи спонсор.',
-  //   icon: Handshake,
-  // },
-  // {
-  //   id: 'tentCamp',
-  //   title: 'Наметове містечко',
-  //   description: 'Забронюйте місце в наметовому містечку для проживання.',
-  //   icon: Tent,
-  // },
 ];
 
 export function RegistrationSection() {
@@ -78,7 +67,7 @@ export function RegistrationSection() {
       id="register"
       aria-label="Реєстрації"
     >
-      <div className={s.inner}>
+      <div>
         <h2 className={s.heading}>Оберіть формат участі</h2>
         <p className={s.subheading}>
           Ми будемо дуже раді бачити вас на {FESTIVAL.name}!

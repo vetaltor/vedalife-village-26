@@ -8,7 +8,7 @@ export type RegistrationPathCardProps = {
   href: string;
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon?: LucideIcon;
   backgroundImage?: string;
 };
 
@@ -28,22 +28,26 @@ export function RegistrationPathCard({
     <li>
       <a
         href={href}
-        className={s.cardLink}
+        className={s.link}
         target="_blank"
         rel="noopener noreferrer"
       >
         <div
-          className={clsx(s.card, hasBackgroundImage && s.cardWithImage)}
+          className={clsx(s.root, hasBackgroundImage && s.root_withImage)}
           style={cardStyle}
         >
-          <div className={s.cardHeader}>
-            <h3 className={s.cardTitle}>{title}</h3>
-            <div className={s.iconWrapper}>
-              <Icon size={24} aria-hidden="true" />
-            </div>
+          <div className={s.header}>
+            <h3 className={s.title}>{title}</h3>
+            {Icon && (
+              <div className={s.iconWrapper}>
+                <Icon size={24} aria-hidden="true" />
+              </div>
+            )}
           </div>
-          <p className={s.cardDescription}>{description}</p>
-          <ArrowUpRight className={s.arrow} size={20} aria-hidden="true" />
+          <p className={s.description}>{description}</p>
+          <div className={s.linkIconWrapper}>
+            <ArrowUpRight size={20} aria-hidden="true" />
+          </div>
         </div>
       </a>
     </li>
