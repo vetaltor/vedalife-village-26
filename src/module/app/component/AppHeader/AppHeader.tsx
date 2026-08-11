@@ -1,17 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, NavLink } from 'react-router';
-import { ROUTES } from '@/config/routes';
+import { Link } from 'react-router';
+import { NAV_LINKS } from '@/config/routes';
 import { FESTIVAL } from '@/data/festival';
 import s from './AppHeader.module.css';
-
-const NAV_LINKS = [
-  { to: ROUTES.home, label: 'Головна' },
-  { to: ROUTES.about, label: 'Про фестиваль' },
-  { to: ROUTES.program, label: 'Програма' },
-  { to: ROUTES.location, label: 'Як дістатися' },
-  { to: ROUTES.contacts, label: 'Контакти' },
-] as const;
 
 export function AppHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,9 +28,6 @@ export function AppHeader() {
       document.removeEventListener('keydown', onKeyDown);
     };
   }, [isMenuOpen]);
-
-  const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    isActive ? `${s.navLink} ${s.navLinkActive}` : s.navLink;
 
   return (
     <header className={s.root}>

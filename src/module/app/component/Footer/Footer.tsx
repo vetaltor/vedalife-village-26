@@ -1,7 +1,6 @@
 import { Link } from 'react-router';
-import { ROUTES } from '@/config/routes';
-import { CONTACTS, FESTIVAL } from '@/data/festival';
-import { InstagramIcon } from '@/shared/component/InstagramIcon';
+import { NAV_LINKS } from '@/config/routes';
+import { FESTIVAL } from '@/data/festival';
 import s from './Footer.module.css';
 
 export function Footer() {
@@ -14,23 +13,12 @@ export function Footer() {
         </div>
 
         <nav className={s.nav} aria-label="Навігація у футері">
-          <Link to={ROUTES.program} className={s.link}>
-            Програма
-          </Link>
-          <Link to={ROUTES.about} className={s.link}>
-            Про нас
-          </Link>
+          {NAV_LINKS.map(({ to, label }) => (
+            <Link key={to} to={to} className={s.link}>
+              {label}
+            </Link>
+          ))}
         </nav>
-
-        <a
-          href={CONTACTS.instagramUrl}
-          className={s.instagramLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <InstagramIcon size={20} />
-          Instagram
-        </a>
       </div>
     </footer>
   );

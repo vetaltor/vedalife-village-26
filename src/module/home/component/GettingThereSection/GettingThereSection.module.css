@@ -223,8 +223,7 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background-color: var(--color-deep-purple);
-  color: var(--color-text-inverse);
+  background-color: var(--color-sage-light);
   border-radius: 1.25rem;
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -238,8 +237,9 @@
   width: 3rem;
   height: 3rem;
   border-radius: 9999px;
-  background-color: rgba(229, 234, 182, 0.15);
-  color: var(--color-sage-light);
+  border: 1px solid var(--color-olive-dark);
+  /* background-color: var(--color-sage-light); */
+  color: var(--color-olive-dark);
 }
 
 .transferTitle {
@@ -253,11 +253,9 @@
   margin: 0;
   line-height: 1.6;
   font-size: 0.9375rem;
-  color: #e6e3ea;
 }
 
 .transferCard .transferNote {
-  color: #d1d5db;
   font-size: 0.8125rem;
   line-height: 1.5;
   margin-top: 0.5rem;
