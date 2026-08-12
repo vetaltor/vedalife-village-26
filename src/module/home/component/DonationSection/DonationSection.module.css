@@ -15,31 +15,19 @@
   }
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.iconWrapper {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 9999px;
-  background-color: #e2e6d4;
-  color: var(--color-olive-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
 .heading {
   font-family: var(--font-serif-family);
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: var(--color-deep-purple);
-  margin: 0;
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
 }
 
 .text {

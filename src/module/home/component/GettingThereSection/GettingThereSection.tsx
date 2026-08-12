@@ -67,18 +67,23 @@ export function GettingThereSection() {
             <h4 className={s.routeTitle}>З Києва</h4>
             <p>
               Відправлення з <strong>автостанції «Південна»</strong> (станція
-              метро <strong>«Іподром»</strong>) автобусом
-              <strong> «Київ — Чагів»</strong>.
+              метро <strong>«Іподром»</strong>). Обирайте автобус, який прямує
+              через зупинку <strong>«Чагів»</strong>.
             </p>
             <p className={s.schedule}>
               <Clock3 size={16} aria-hidden="true" />
-              Час відправлення: 08:00, 14:30, 16:50.
+              Рейси з Києва:
             </p>
+            <ul className={s.scheduleList}>
+              <li>14:45 — Київ → Медівка </li>
+              <li>16:50 — Київ → Липовець</li>
+              <li>18:30 — Київ → Іллінці</li>
+            </ul>
             <p className={s.hint}>
               Актуальний розклад рекомендуємо уточнювати на автостанції.
             </p>
             <p>
-              Вийдіть на зупинці <strong>«Чагів»</strong>.
+              Виходити потрібно на зупинці <strong>«Чагів»</strong>.
             </p>
           </article>
 

@@ -189,6 +189,35 @@
   color: var(--color-olive-dark);
 }
 
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-sage-light);
+  border-radius: 0.75rem;
+}
+
+.scheduleList li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  line-height: 1.5;
+  font-size: 0.9375rem;
+  color: var(--color-text-main);
+}
+
+.scheduleList li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 9999px;
+  background-color: var(--color-olive-dark);
+}
+
 .hint {
   color: var(--color-text-muted);
   font-size: 0.8125rem;

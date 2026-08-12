@@ -10,10 +10,12 @@ export function HomePage() {
     <>
       <HeroSection />
       <AboutSection />
+      {/* <PhotoSection /> */}
       <RegistrationSection />
+      {/* <LocationsSection /> */}
+      <DonationSection />
       <GettingThereSection />
       <ContactsSection />
-      <DonationSection />
     </>
   );
 }

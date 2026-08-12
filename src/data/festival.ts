@@ -19,8 +19,8 @@ export const REGISTRATION_URLS = {
 export const CONTACTS = {
   instagramUrl: 'https://www.instagram.com/vedalife_eco_village/',
   mapsUrl: 'https://maps.app.goo.gl/ayqvhijWQr2V2xsh8',
-  telegramChannelUrl: 'https://t.me/vedalifegovindaland',
-  telegramCommunityUrl: 'https://t.me/vedalifegovindaland2026',
+  telegramChannelUrl: 'https://t.me/vedalife_eco_village',
+  telegramCommunityUrl: 'https://t.me/vedalifegovindaland',
   email: 'vedalifecovill@gmail.com',
   partnership: {
     contact: 'Сергій',
