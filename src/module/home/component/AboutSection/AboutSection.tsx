@@ -8,7 +8,6 @@ import {
   Music,
   Palette,
   ShoppingBag,
-  Sparkles,
 } from 'lucide-react';
 import photo1 from '@/assets/images/about/photo_1.avif';
 import photo2 from '@/assets/images/about/photo_2.avif';
@@ -20,10 +19,10 @@ import photo7 from '@/assets/images/about/photo_7.avif';
 import photo8 from '@/assets/images/about/photo_8.avif';
 import photo9 from '@/assets/images/about/photo_9.avif';
 import photo10 from '@/assets/images/about/photo_10.avif';
-import ornament from '@/assets/images/ornament.svg';
 import { FESTIVAL } from '@/data/festival';
 import { MESSAGES } from '@/data/messages';
 import { LayoutStyles } from '@/module/app/component/Layout';
+import { MasonryGallery } from '@/shared/component/MasonryGallery';
 import s from './AboutSection.module.css';
 
 type Highlight = {
@@ -62,10 +61,6 @@ export function AboutSection() {
       aria-label={MESSAGES.home.aboutSection.title}
     >
       <div className={s.inner}>
-        <img className={s.ornament} src={ornament} alt="" aria-hidden="true" />
-
-        <Sparkles className={s.sparkle} aria-hidden="true" />
-
         <h2 className={s.heading}>{MESSAGES.home.aboutSection.title}</h2>
 
         <p className={s.text}>
@@ -91,13 +86,7 @@ export function AboutSection() {
 
         {/* <h3 className={s.galleryHeading}>Фото з минулих фестивалів</h3> */}
 
-        <ul className={s.gallery}>
-          {galleryImages.map(({ src, alt }) => (
-            <li key={src} className={s.galleryItem}>
-              <img src={src} alt={alt} loading="lazy" />
-            </li>
-          ))}
-        </ul>
+        <MasonryGallery images={galleryImages} />
       </div>
     </section>
   );
