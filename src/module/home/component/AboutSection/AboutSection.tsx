@@ -10,7 +10,6 @@ import {
   ShoppingBag,
   Sparkles,
 } from 'lucide-react';
-import photo10 from '@/assets/images/about/photo_10.avif';
 import photo1 from '@/assets/images/about/photo_1.avif';
 import photo2 from '@/assets/images/about/photo_2.avif';
 import photo3 from '@/assets/images/about/photo_3.avif';
@@ -20,6 +19,7 @@ import photo6 from '@/assets/images/about/photo_6.avif';
 import photo7 from '@/assets/images/about/photo_7.avif';
 import photo8 from '@/assets/images/about/photo_8.avif';
 import photo9 from '@/assets/images/about/photo_9.avif';
+import photo10 from '@/assets/images/about/photo_10.avif';
 import ornament from '@/assets/images/ornament.svg';
 import { FESTIVAL } from '@/data/festival';
 import { MESSAGES } from '@/data/messages';
@@ -89,7 +89,7 @@ export function AboutSection() {
           ))}
         </ul>
 
-        <h3 className={s.galleryHeading}>Фото з минулих фестивалів</h3>
+        {/* <h3 className={s.galleryHeading}>Фото з минулих фестивалів</h3> */}
 
         <ul className={s.gallery}>
           {galleryImages.map(({ src, alt }) => (
