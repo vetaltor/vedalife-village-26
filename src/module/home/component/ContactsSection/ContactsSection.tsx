@@ -1,49 +1,95 @@
-import type { ComponentType } from 'react';
 import clsx from 'clsx';
-import { Handshake, Mail, Phone, Send } from 'lucide-react';
+import { Handshake, Mail, Phone, Users } from 'lucide-react';
 import { CONTACTS } from '@/data/festival';
 import { LayoutStyles } from '@/module/app/component/Layout';
-import { Button } from '@/shared/component/Button';
-import { InstagramIcon } from '@/shared/component/InstagramIcon';
-import { SimpleCard } from '@/shared/component/SimpleCard';
+import { InstagramIcon } from '@/shared/component/icons/InstagramIcon';
+import { TelegramIcon } from '@/shared/component/icons/TelegramIcon';
 import s from './ContactsSection.module.css';
 
-type ContactChannel = {
+type ContactLink = {
   id: string;
-  title: string;
-  description: string;
-  icon: ComponentType<{ size?: number }>;
+  label: string;
+  description?: string;
+  icon: React.ReactNode;
   href: string;
-  cta: string;
+  external?: boolean;
 };
 
-const CHANNELS: ContactChannel[] = [
+type ContactGroup = {
+  id: string;
+  title: string;
+  icon: React.ReactNode;
+  items: ContactLink[];
+};
+
+const CONTACT_GROUPS: ContactGroup[] = [
   {
-    id: 'telegram-channel',
-    title: 'Telegram-канал',
-    description:
-      'Усі новини, анонси та важливі повідомлення про фестиваль публікуються в офіційному Telegram-каналі.',
-    icon: Send,
-    href: CONTACTS.telegramChannelUrl,
-    cta: 'Новини фестивалю',
+    id: 'social',
+    title: 'Соцмережі',
+    icon: <Users size={18} aria-hidden="true" />,
+    items: [
+      {
+        id: 'telegram-channel',
+        label: 'Telegram-канал',
+        description:
+          'Усі новини, анонси та важливі повідомлення про фестиваль.',
+        icon: <TelegramIcon size={36} />,
+        href: CONTACTS.telegramChannelUrl,
+        external: true,
+      },
+      {
+        id: 'telegram-community',
+        label: 'Telegram-спільнота',
+        description: 'Запитання та спілкування з іншими учасниками фестивалю.',
+        icon: <TelegramIcon size={36} />,
+        href: CONTACTS.telegramCommunityUrl,
+        external: true,
+      },
+      {
+        id: 'instagram',
+        label: 'Instagram',
+        description: 'Новини фестивалю, фото, відео та Direct.',
+        icon: <InstagramIcon size={36} />,
+        href: CONTACTS.instagramUrl,
+        external: true,
+      },
+    ],
   },
   {
-    id: 'telegram-community',
-    title: 'Telegram-спільнота',
-    description:
-      'Маєте запитання або хочете поспілкуватися з іншими учасниками? Приєднуйтеся до нашої Telegram-спільноти.',
-    icon: Send,
-    href: CONTACTS.telegramCommunityUrl,
-    cta: 'Спільнота фестивалю',
+    id: 'partnership',
+    title: 'Партнерство та спонсорство',
+    icon: <Handshake size={18} aria-hidden="true" />,
+    items: [
+      {
+        id: 'partner-phone',
+        label: `${CONTACTS.partnership.contact} · ${CONTACTS.partnership.phone}`,
+        description:
+          'З питань партнерства, співпраці та спонсорської підтримки.',
+        icon: <Phone size={28} aria-hidden="true" />,
+        href: CONTACTS.partnership.phoneHref,
+      },
+      {
+        id: 'partner-telegram',
+        label: CONTACTS.partnership.telegramHandle,
+        icon: <TelegramIcon size={36} />,
+        href: CONTACTS.partnership.telegramUrl,
+        external: true,
+      },
+    ],
   },
   {
-    id: 'instagram',
-    title: 'Instagram',
-    description:
-      'Слідкуйте за новинами фестивалю, фото та відео, а також пишіть нам у Direct.',
-    icon: InstagramIcon,
-    href: CONTACTS.instagramUrl,
-    cta: 'Instagram Vedalife Eco Village',
+    id: 'email',
+    title: 'Email',
+    icon: <Mail size={18} aria-hidden="true" />,
+    items: [
+      {
+        id: 'email',
+        label: CONTACTS.email,
+        description: 'Для офіційних звернень.',
+        icon: <Mail size={28} aria-hidden="true" />,
+        href: `mailto:${CONTACTS.email}`,
+      },
+    ],
   },
 ];
 
@@ -54,86 +100,45 @@ export function ContactsSection() {
       id="contacts"
       aria-label="Контакти"
     >
-      <div className={s.inner}>
-        <h2 className={s.heading}>Контакти</h2>
-        <p className={s.subheading}>
-          Маєте запитання щодо фестивалю? Ми завжди раді допомогти!
-        </p>
+      <h2 className={s.heading}>Контакти</h2>
+      <p className={s.subheading}>
+        Маєте запитання щодо фестивалю? Ми завжди раді допомогти!
+      </p>
 
-        <div className={s.cardList}>
-          {CHANNELS.map((channel) => {
-            const Icon = channel.icon;
-            return (
-              <SimpleCard
-                key={channel.id}
-                icon={<Icon size={24} aria-hidden="true" />}
-                columnLayout
-                actions={
-                  <Button
-                    as="link"
-                    href={channel.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {channel.cta}
-                  </Button>
-                }
-              >
-                <SimpleCard.Title>{channel.title}</SimpleCard.Title>
-                <p className={s.cardText}>{channel.description}</p>
-              </SimpleCard>
-            );
+      <div className={s.panel}>
+        <div className={s.groups}>
+          {CONTACT_GROUPS.map((group) => {
+          return (
+            <div key={group.id} className={s.group}>
+              <h3 className={s.groupTitle}>
+                {group.icon}
+                {group.title}
+              </h3>
+              <ul className={s.list}>
+                {group.items.map((item) => {
+                  const externalProps = item.external
+                    ? { target: '_blank', rel: 'noopener noreferrer' as const }
+                    : {};
+                  return (
+                    <li key={item.id}>
+                      <a className={s.row} href={item.href} {...externalProps}>
+                        <span className={s.rowIcon}>{item.icon}</span>
+                        <span className={s.rowBody}>
+                          <span className={s.rowLabel}>{item.label}</span>
+                          {item.description ? (
+                            <span className={s.rowDesc}>
+                              {item.description}
+                            </span>
+                          ) : null}
+                        </span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
           })}
-
-          <SimpleCard
-            icon={<Mail size={24} aria-hidden="true" />}
-            columnLayout
-            actions={
-              <Button
-                as="link"
-                variant="secondary"
-                href={`mailto:${CONTACTS.email}`}
-              >
-                {CONTACTS.email}
-              </Button>
-            }
-          >
-            <SimpleCard.Title>Email</SimpleCard.Title>
-            <p className={s.cardText}>Для офіційних звернень:</p>
-          </SimpleCard>
-
-          <SimpleCard
-            icon={<Handshake size={24} aria-hidden="true" />}
-            columnLayout
-            actions={
-              <>
-                <Button
-                  as="link"
-                  variant="secondary"
-                  href={CONTACTS.partnership.phoneHref}
-                  icon={<Phone size={16} aria-hidden="true" />}
-                >
-                  {CONTACTS.partnership.phone} ({CONTACTS.partnership.contact})
-                </Button>
-                <Button
-                  as="link"
-                  variant="secondary"
-                  href={CONTACTS.partnership.telegramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  icon={<Send size={16} aria-hidden="true" />}
-                >
-                  {CONTACTS.partnership.telegramHandle}
-                </Button>
-              </>
-            }
-          >
-            <SimpleCard.Title>Партнерство та спонсорство</SimpleCard.Title>
-            <p className={s.cardText}>
-              З питань партнерства, співпраці та спонсорської підтримки
-              звертайтеся до:
-            </p>
-          </SimpleCard>
         </div>
       </div>
     </section>

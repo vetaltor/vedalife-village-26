@@ -46,7 +46,7 @@ export function IbanTransferCard() {
           )
         }
       >
-        {copied ? 'Скопійовано' : 'Скопіювати реквізити'}
+        {copied ? 'Скопійовано' : 'Скопіювати IBAN'}
       </Button>
     </Card>
   );

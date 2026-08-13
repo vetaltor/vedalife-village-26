@@ -46,7 +46,7 @@ export function PrivatBankCard() {
           )
         }
       >
-        {copied ? 'Скопійовано' : 'Скопіювати реквізити'}
+        {copied ? 'Скопійовано' : 'Скопіювати номер картки'}
       </Button>
     </Card>
   );

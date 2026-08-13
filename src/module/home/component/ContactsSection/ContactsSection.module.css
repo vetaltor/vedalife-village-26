@@ -2,7 +2,7 @@
   padding: 0 0 var(--spacing-section-y);
 }
 
-.inner {
+.panel {
   background-color: var(--color-cream);
   border: 1px solid var(--color-sage-light);
   border-radius: 1.5rem;
@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 768px) {
-  .inner {
+  .panel {
     padding: 3rem;
   }
 }
@@ -38,16 +38,118 @@
   line-height: 1.6;
 }
 
-.cardList {
+.groups {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
-.cardText {
+.group + .group {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-sage-light);
+}
+
+@media (min-width: 768px) {
+  .groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .group + .group {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .group:nth-child(even) {
+    border-left: 1px solid var(--color-sage-light);
+    padding-left: 2rem;
+  }
+
+  .group:nth-child(n + 3) {
+    border-top: 1px solid var(--color-sage-light);
+    padding-top: 2rem;
+  }
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif-family);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-deep-purple);
+  margin: 0 0 0.75rem;
+}
+
+.groupTitle svg {
+  color: var(--color-olive-dark);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.row:hover {
+  background-color: var(--color-sage-light);
+}
+
+.row:hover .rowIcon {
+  transform: scale(1.1);
+}
+
+.row:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
+
+.rowIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  color: var(--color-olive-dark);
+  transition: transform 0.15s ease;
+}
+
+.rowBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.rowLabel {
+  color: var(--color-deep-purple);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.rowDesc {
   color: var(--color-text-muted);
   font-size: 0.875rem;
-  line-height: 1.6;
-  margin: 0;
-  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }

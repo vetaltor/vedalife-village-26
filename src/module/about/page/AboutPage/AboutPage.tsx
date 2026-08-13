@@ -1,7 +1,7 @@
+import { CalendarDays, MapPin, Sparkles, Sprout, Tent } from 'lucide-react';
 import { Link } from 'react-router';
-import { CalendarDays, MapPin, Sparkles, Tent, Sprout } from 'lucide-react';
 import { CONTACTS, FESTIVAL } from '@/data/festival';
-import { InstagramIcon } from '@/shared/component/InstagramIcon';
+import { InstagramIcon } from '@/shared/component/icons/InstagramIcon';
 import { getPublicAsset } from '@/util/getPublicAsset';
 import styles from './AboutPage.module.css';
 
