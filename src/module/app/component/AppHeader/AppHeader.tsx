@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router';
 import { NAV_LINKS } from '@/config/routes';
-import { FESTIVAL } from '@/data/festival';
+import { CONTACTS, FESTIVAL } from '@/data/festival';
+import { InstagramIcon } from '@/shared/component/icons/InstagramIcon';
+import { TelegramIcon } from '@/shared/component/icons/TelegramIcon';
 import s from './AppHeader.module.css';
 
 export function AppHeader() {
@@ -53,6 +55,29 @@ export function AppHeader() {
               {label}
             </Link>
           ))}
+
+          <span className={s.navDivider} aria-hidden="true" />
+
+          <div className={s.social}>
+            <a
+              className={s.socialLink}
+              href={CONTACTS.telegramChannelUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram-канал фестивалю"
+            >
+              <TelegramIcon size={24} />
+            </a>
+            <a
+              className={s.socialLink}
+              href={CONTACTS.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram фестивалю"
+            >
+              <InstagramIcon size={24} />
+            </a>
+          </div>
         </div>
 
         {/* <Link to="/#register" className={s.ctaBtn}>
@@ -98,6 +123,27 @@ export function AppHeader() {
             >
               Реєстрація
             </Link>
+
+            <div className={s.mobileSocial}>
+              <a
+                className={s.socialLink}
+                href={CONTACTS.telegramChannelUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram-канал фестивалю"
+              >
+                <TelegramIcon size={30} />
+              </a>
+              <a
+                className={s.socialLink}
+                href={CONTACTS.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram фестивалю"
+              >
+                <InstagramIcon size={30} />
+              </a>
+            </div>
           </nav>
         </div>
       )}
