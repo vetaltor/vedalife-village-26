@@ -59,7 +59,13 @@
   color: var(--color-sage-light);
 }
 
-.instagramLink {
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.socialLink {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -70,6 +76,6 @@
   transition: color 0.2s;
 }
 
-.instagramLink:hover {
+.socialLink:hover {
   color: var(--color-sage-light);
 }
