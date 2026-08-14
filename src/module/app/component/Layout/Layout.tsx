@@ -5,7 +5,7 @@ import { AppHeader } from '../AppHeader';
 import s from './Layout.module.css';
 
 export function Layout() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -16,7 +16,7 @@ export function Layout() {
       }
     }
     window.scrollTo({ top: 0 });
-  }, [pathname, hash]);
+  }, [pathname, hash, key]);
 
   return (
     <div className={s.root}>
