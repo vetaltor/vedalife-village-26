@@ -6,7 +6,7 @@
 .main {
   /* max-width: var(--main-max-width); */
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 @media (min-width: 1024px) {
