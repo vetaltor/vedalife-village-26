@@ -100,12 +100,12 @@ export function ContactsSection() {
       id="contacts"
       aria-label="Контакти"
     >
-      <h2 className={s.heading}>Контакти</h2>
-      <p className={s.subheading}>
-        Маєте запитання щодо фестивалю? Ми завжди раді допомогти!
-      </p>
-
       <div className={s.panel}>
+        <h2 className={s.heading}>Контакти</h2>
+        <p className={s.subheading}>
+          Маєте запитання щодо фестивалю? Ми завжди раді допомогти!
+        </p>
+
         <div className={s.groups}>
           {CONTACT_GROUPS.map((group) => {
           return (

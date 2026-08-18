@@ -8,9 +8,9 @@ export function ProgramPage() {
     <section className={styles.section}>
       <h1 className={styles.title}>Програма фестивалю</h1>
       <p className={styles.text}>
-        Детальну програму фестивалю Veda Life Eco Village буде опубліковано
+        Детальну програму фестивалю Vedalife Eco Village буде опубліковано
         незабаром. Стежте за оновленнями, щоб нічого не пропустити: лекції,
-        майстер-класи, концерти, ярмарок та спільні практики в Govinda Land.
+        майстер-класи, концерти, ярмарок та спільні практики в Govindaland.
       </p>
 
       <div className={styles.card}>

@@ -6,7 +6,6 @@
   position: relative;
   overflow: hidden;
   background-color: var(--color-cream);
-  border: 1px solid #e5eab6;
   border-radius: 1.5rem;
   padding: 1.5rem 1rem;
   box-shadow: 0 25px 50px -12px rgba(28, 14, 48, 0.06);
@@ -18,10 +17,32 @@
   }
 }
 
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.ornamentLine {
+  width: 3rem;
+  height: 1px;
+  background-color: var(--color-olive-dark);
+  opacity: 0.45;
+}
+
+.ornamentIcon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-olive-dark);
+}
+
 .heading {
   font-family: var(--font-serif-family);
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
   color: var(--color-deep-purple);
   margin: 0 0 1.5rem;
   text-align: center;
@@ -29,15 +50,26 @@
 
 @media (min-width: 768px) {
   .heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
 .text {
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 1.125rem;
+  line-height: 1.8;
   margin: 0 auto;
+  max-width: 60ch;
   color: var(--color-text-main);
+}
+
+.text:first-of-type::first-letter {
+  font-family: var(--font-serif-family);
+  font-size: 4em;
+  line-height: 0.8;
+  font-weight: 900;
+  float: left;
+  padding: 0.05em 0.12em 0 0;
+  color: var(--color-deep-purple);
 }
 
 .text + .text {
@@ -52,7 +84,7 @@
 
 .festivalName {
   font-family: var(--font-serif-family);
-  font-size: 1.4em;
+  font-size: 1.35em;
   font-weight: 700;
   color: var(--color-deep-purple);
   letter-spacing: -0.02em;
@@ -60,8 +92,10 @@
 
 .chips {
   list-style: none;
-  margin: 2rem 0 2.5rem;
-  padding: 0;
+  margin: 2.5rem 0 3rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--color-sage-light);
+  border-bottom: 1px solid var(--color-sage-light);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -71,10 +105,11 @@
 .chip {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  padding: 12px 24px;
+  gap: 0.75rem;
+  padding: 10px 20px;
   border-radius: 9999px;
-  background-color: var(--color-sage-light);
+  border: 1px solid var(--color-olive-dark);
+  background-color: transparent;
   color: var(--color-olive-dark);
   font-size: 1rem;
   font-weight: 500;
@@ -82,6 +117,6 @@
 
 .chipIcon {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }

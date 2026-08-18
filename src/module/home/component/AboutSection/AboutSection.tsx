@@ -61,6 +61,12 @@ export function AboutSection() {
       aria-label={MESSAGES.home.aboutSection.title}
     >
       <div className={s.inner}>
+        <div className={s.ornament} aria-hidden="true">
+          <span className={s.ornamentLine} />
+          <Flower2 className={s.ornamentIcon} />
+          <span className={s.ornamentLine} />
+        </div>
+
         <h2 className={s.heading}>{MESSAGES.home.aboutSection.title}</h2>
 
         <p className={s.text}>
