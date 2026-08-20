@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Flower2, PersonStanding, Spotlight, Sprout } from 'lucide-react';
+import { PersonStanding, Spotlight, Sprout } from 'lucide-react';
 
 export type ProgramEvent = {
   time: string;

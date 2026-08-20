@@ -1,42 +1,39 @@
 import clsx from 'clsx';
-import { ChevronDown, Clock3, Film, Spotlight, Star } from 'lucide-react';
+import { ChevronDown, Clock3, Film, Star } from 'lucide-react';
 import { DOME_PROGRAM } from '../../data/domeProgram';
 import { PROGRAM } from '../../data/program';
-import styles from './ProgramPage.module.css';
+import s from './ProgramPage.module.css';
 
 export function ProgramPage() {
   return (
-    <section className={styles.section}>
-      <h1 className={styles.title}>Програма фестивалю</h1>
+    <section className={s.section}>
+      <h1 className={s.title}>Програма фестивалю</h1>
 
-      <div className={styles.days}>
+      <div className={s.days}>
         {PROGRAM.map((day) => (
-          <details key={day.id} className={styles.day}>
-            <summary className={styles.dayHeader}>
-              <span className={styles.dayBadge}>{day.badge}</span>
-              <div className={styles.dayMeta}>
-                <p className={styles.dayWeekday}>{day.weekday}</p>
-                <h2 className={styles.dayTitle}>{day.date}</h2>
+          <details key={day.id} className={s.day}>
+            <summary className={s.dayHeader}>
+              <span className={s.dayBadge}>{day.badge}</span>
+              <div className={s.dayMeta}>
+                <p className={s.dayWeekday}>{day.weekday}</p>
+                <h2 className={s.dayTitle}>{day.date}</h2>
               </div>
-              <ChevronDown className={styles.chevron} aria-hidden="true" />
+              <ChevronDown className={s.chevron} aria-hidden="true" />
             </summary>
 
-            <div className={styles.spaces}>
+            <div className={s.spaces}>
               {day.spaces.map((space) => {
                 const Icon = space.icon;
                 return (
                   <div
                     key={space.id}
-                    className={clsx(
-                      styles.space,
-                      space.featured && styles.spaceFeatured
-                    )}
+                    className={clsx(s.space, space.featured && s.spaceFeatured)}
                   >
-                    <h3 className={styles.spaceTitle}>
+                    <h3 className={s.spaceTitle}>
                       <span
                         className={clsx(
-                          styles.spaceIcon,
-                          space.featured && styles.spaceIconFeatured
+                          s.spaceIcon,
+                          space.featured && s.spaceIconFeatured
                         )}
                       >
                         <Icon size={18} aria-hidden="true" />
@@ -44,21 +41,19 @@ export function ProgramPage() {
                       {space.title}
                     </h3>
 
-                    <ul className={styles.events}>
+                    <ul className={s.events}>
                       {space.events.map((event) => (
                         <li key={`${space.id}-${event.time}-${event.title}`}>
                           <time
-                            className={styles.eventTime}
+                            className={s.eventTime}
                             dateTime={`${day.isoDate}T${event.time}`}
                           >
                             {event.time}
                           </time>
-                          <div className={styles.eventBody}>
-                            <p className={styles.eventTitle}>{event.title}</p>
+                          <div className={s.eventBody}>
+                            <p className={s.eventTitle}>{event.title}</p>
                             {event.description ? (
-                              <p className={styles.eventDesc}>
-                                {event.description}
-                              </p>
+                              <p className={s.eventDesc}>{event.description}</p>
                             ) : null}
                           </div>
                         </li>
@@ -71,51 +66,49 @@ export function ProgramPage() {
           </details>
         ))}
 
-        <details className={styles.day}>
-          <summary className={styles.dayHeader}>
-            <span className={styles.dayBadge}>
+        <details className={s.day}>
+          <summary className={s.dayHeader}>
+            <span className={s.dayBadge}>
               <Film size={20} aria-hidden="true" />
             </span>
-            <div className={styles.dayMeta}>
-              <p className={styles.dayWeekday}>Всі дні</p>
-              <h2 className={styles.dayTitle}>
-                Арт-простір та сферичний кінотеатр
-              </h2>
+            <div className={s.dayMeta}>
+              <p className={s.dayWeekday}>Всі дні</p>
+              <h2 className={s.dayTitle}>Арт-простір та сферичний кінотеатр</h2>
             </div>
-            <ChevronDown className={styles.chevron} aria-hidden="true" />
+            <ChevronDown className={s.chevron} aria-hidden="true" />
           </summary>
 
-          <div className={styles.shows}>
+          <div className={s.shows}>
             {DOME_PROGRAM.map((show) => (
-              <article key={show.id} className={styles.show}>
+              <article key={show.id} className={s.show}>
                 <img
                   src={show.image}
                   alt={show.imageAlt}
-                  className={styles.showImage}
+                  className={s.showImage}
                   loading="lazy"
                 />
-                <div className={styles.showBody}>
-                  <h3 className={styles.showTitle}>{show.title}</h3>
-                  <p className={styles.showDesc}>{show.description}</p>
-                  <dl className={styles.showMeta}>
-                    <div className={styles.showMetaItem}>
+                <div className={s.showBody}>
+                  <h3 className={s.showTitle}>{show.title}</h3>
+                  <p className={s.showDesc}>{show.description}</p>
+                  <dl className={s.showMeta}>
+                    <div className={s.showMetaItem}>
                       <dt>
                         <Star size={14} aria-hidden="true" />
-                        <span className={styles.srOnly}>Рік випуску</span>
+                        <span className={s.srOnly}>Рік випуску</span>
                       </dt>
                       <dd>{show.year}</dd>
                     </div>
-                    <div className={styles.showMetaItem}>
+                    <div className={s.showMetaItem}>
                       <dt>
                         <Film size={14} aria-hidden="true" />
-                        <span className={styles.srOnly}>Жанр</span>
+                        <span className={s.srOnly}>Жанр</span>
                       </dt>
                       <dd>{show.genre}</dd>
                     </div>
-                    <div className={styles.showMetaItem}>
+                    <div className={s.showMetaItem}>
                       <dt>
                         <Clock3 size={14} aria-hidden="true" />
-                        <span className={styles.srOnly}>Тривалість</span>
+                        <span className={s.srOnly}>Тривалість</span>
                       </dt>
                       <dd>{show.duration}</dd>
                     </div>
