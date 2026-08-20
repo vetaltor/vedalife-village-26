@@ -81,39 +81,37 @@ export function ProgramPage() {
           <div className={s.shows}>
             {DOME_PROGRAM.map((show) => (
               <article key={show.id} className={s.show}>
+                <h3 className={s.showTitle}>{show.title}</h3>
                 <img
                   src={show.image}
                   alt={show.imageAlt}
                   className={s.showImage}
                   loading="lazy"
                 />
-                <div className={s.showBody}>
-                  <h3 className={s.showTitle}>{show.title}</h3>
-                  <p className={s.showDesc}>{show.description}</p>
-                  <dl className={s.showMeta}>
-                    <div className={s.showMetaItem}>
-                      <dt>
-                        <Star size={14} aria-hidden="true" />
-                        <span className={s.srOnly}>Рік випуску</span>
-                      </dt>
-                      <dd>{show.year}</dd>
-                    </div>
-                    <div className={s.showMetaItem}>
-                      <dt>
-                        <Film size={14} aria-hidden="true" />
-                        <span className={s.srOnly}>Жанр</span>
-                      </dt>
-                      <dd>{show.genre}</dd>
-                    </div>
-                    <div className={s.showMetaItem}>
-                      <dt>
-                        <Clock3 size={14} aria-hidden="true" />
-                        <span className={s.srOnly}>Тривалість</span>
-                      </dt>
-                      <dd>{show.duration}</dd>
-                    </div>
-                  </dl>
-                </div>
+                <dl className={s.showMeta}>
+                  <div className={s.showMetaItem}>
+                    <dt>
+                      <Star size={14} aria-hidden="true" />
+                      <span className={s.srOnly}>Рік випуску</span>
+                    </dt>
+                    <dd>{show.year}</dd>
+                  </div>
+                  <div className={s.showMetaItem}>
+                    <dt>
+                      <Film size={14} aria-hidden="true" />
+                      <span className={s.srOnly}>Жанр</span>
+                    </dt>
+                    <dd>{show.genre}</dd>
+                  </div>
+                  <div className={s.showMetaItem}>
+                    <dt>
+                      <Clock3 size={14} aria-hidden="true" />
+                      <span className={s.srOnly}>Тривалість</span>
+                    </dt>
+                    <dd>{show.duration}</dd>
+                  </div>
+                </dl>
+                <p className={s.showDesc}>{show.description}</p>
               </article>
             ))}
           </div>
