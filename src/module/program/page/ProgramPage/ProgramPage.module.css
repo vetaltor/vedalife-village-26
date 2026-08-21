@@ -138,6 +138,36 @@
   }
 }
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .dayTitle {
+    font-size: 1.25rem;
+  }
+
+  .spaceTitle {
+    font-size: 1.125rem;
+  }
+
+  .eventTitle {
+    font-size: 0.9375rem;
+  }
+
+  .showTitle {
+    font-size: 1.125rem;
+  }
+
+  .filmsHeader {
+    font-size: 1rem;
+  }
+
+  .galleryHeader {
+    font-size: 1rem;
+  }
+}
+
 /* Spaces */
 .spaces {
   display: flex;
