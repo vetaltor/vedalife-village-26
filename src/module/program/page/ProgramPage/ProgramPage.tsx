@@ -72,7 +72,7 @@ export function ProgramPage() {
               <Film size={20} aria-hidden="true" />
             </span>
             <div className={s.dayMeta}>
-              <p className={s.dayWeekday}>22–23 серпня • субота та неділя</p>
+              <p className={s.dayWeekday}>22–23 серпня • щогодини</p>
               <h2 className={s.dayTitle}>Арт-простір і сферичний кінотеатр</h2>
             </div>
             <ChevronDown className={s.chevron} aria-hidden="true" />
@@ -82,8 +82,8 @@ export function ProgramPage() {
             <div className={s.gallerySection}>
               <h3 className={s.galleryHeader}>
                 <Compass size={18} aria-hidden="true" />
-                Екскурсії галереями •
-                <span className={s.gallerySchedule}>щогодини</span>
+                Екскурсії галереями
+                {/* <span className={s.gallerySchedule}>щогодини</span> */}
               </h3>
               <div className={s.galleryExhibits}>
                 <div className={s.galleryExhibit}>
