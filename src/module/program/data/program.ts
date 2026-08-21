@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { PersonStanding, Spotlight, Sprout } from 'lucide-react';
+import { BookOpen, PersonStanding, Spotlight, Sprout } from 'lucide-react';
 
 export type ProgramEvent = {
   time: string;
@@ -37,26 +37,12 @@ export const PROGRAM: ProgramDay[] = [
         title: 'Йога-простір',
         icon: PersonStanding,
         events: [
-          {
-            time: '11:00',
-            title: 'FYSM Йога',
-            description: 'З Владиславом',
-          },
-          {
-            time: '12:00',
-            title: 'Цвяхостояння',
-            description: 'Проводить Наталія',
-          },
-          {
-            time: '15:00',
-            title: 'Йога для зцілення серця',
-            description: 'З Інною',
-          },
-          {
-            time: '16:00',
-            title: 'Хатха-йога',
-            description: 'Проводить Тетяна',
-          },
+          { time: '11:00', title: 'FYSM-йога', description: 'Владислав • Fresh Yoga Synthesized Methodology' },
+          { time: '12:00', title: 'Цвяхостояння', description: 'Наталія' },
+          { time: '14:00', title: 'Хатха-йога', description: 'Тетяна' },
+          { time: '15:00', title: 'Йога для зцілення серця', description: 'Інна' },
+          { time: '16:00', title: 'Цвяхостояння', description: 'Арджун' },
+          { time: '17:00', title: 'Танатотерапія', description: 'Євгеній Шевченко' },
         ],
       },
       {
@@ -64,42 +50,33 @@ export const PROGRAM: ProgramDay[] = [
         title: 'Простір саморозвитку',
         icon: Sprout,
         events: [
-          {
-            time: '12:00',
-            title: 'Фіто-екскурсія',
-            description: 'Похід за травами з Мадхурані',
-          },
-          {
-            time: '12:00',
-            title: 'Трансформаційна гра «Самсара»',
-            description: 'Наталія',
-          },
-          {
-            time: '15:00',
-            title: 'Практика пошуку свого шляху реалізації',
-            description: '«Хто Я? Куди Я? Для чого Я?» · Інесса',
-          },
-          {
-            time: '16:30',
-            title: 'Трансформаційна гра «Карма»',
-            description: 'Проводить Сергій Ісаєв (Мадхав Махарадж)',
-          },
+          { time: '12:00', title: 'Фітоекскурсія: похід за травами', description: 'Мадхурані • Збір учасників біля Простору саморозвитку' },
+          { time: '12:00', title: 'Трансформаційна гра «Самсара»', description: 'Наталія' },
+          { time: '15:00', title: 'Практика пошуку свого шляху реалізації', description: '«Хто я? Куди я? Для чого я?» • Інесса' },
+          { time: '16:30', title: 'Трансформаційна гра «Gita Game»', description: 'Сергій' },
+        ],
+      },
+      {
+        id: 'lectures',
+        title: 'Лекторій',
+        icon: BookOpen,
+        events: [
+          { time: '12:00', title: '«Де живе справжня любов?»', description: 'Гірі Магарадж' },
+          { time: '14:00', title: '«У пошуках щастя: чи справді у кожного свій шлях?»', description: 'Мадхав Магарадж' },
+          { time: '15:00', title: '«Внутрішня криза як потенціал розвитку»', description: 'Анджалі, ведична астрологиня' },
+          { time: '16:00', title: '«Йога між людьми: три універсальні принципи дружби»', description: 'Тіртха Магарадж' },
         ],
       },
       {
         id: 'main-stage',
-        title: 'Головна сцена',
+        title: 'Сцена',
         icon: Spotlight,
         featured: true,
         events: [
-          { time: '17:00', title: 'Ансамбль «Кумасі»' },
+          { time: '17:00', title: 'Народний фольклорно-етнографічний ансамбль «Кумасі»' },
           { time: '18:00', title: 'Гурт «ГуртОм»' },
           { time: '19:00', title: 'Мантра-джем' },
-          {
-            time: '20:00',
-            title: 'DJ SUNSHINE',
-            description: 'Ecstatic Dance',
-          },
+          { time: '20:00', title: 'DJ SUNSHINE: Ecstatic Dance' },
         ],
       },
     ],
@@ -116,23 +93,11 @@ export const PROGRAM: ProgramDay[] = [
         title: 'Йога-простір',
         icon: PersonStanding,
         events: [
-          {
-            time: '10:00',
-            title: 'Сеанс Рейкі',
-            description: 'З Джаянті. Зцілення через енергію',
-          },
-          { time: '12:00', title: 'FYSM Йога', description: 'З Владом' },
-          {
-            time: '15:00',
-            title: 'Йога для зцілення серця',
-            description: 'З Інною',
-          },
-          {
-            time: '16:00',
-            title: 'Жіноче коло',
-            description:
-              'Плетіння гобелену з трав, сердечне спілкування в жіночому колі. Ведуча: жіночий психолог, травниця Мадхурані',
-          },
+          { time: '10:00', title: 'Сеанс рейкі: зцілення через енергію', description: 'Джаянті' },
+          { time: '12:00', title: 'FYSM-йога', description: 'Влад • Fresh Yoga Synthesized Methodology' },
+          { time: '14:00', title: 'Цвяхостояння', description: 'Арджун' },
+          { time: '15:00', title: 'Йога для зцілення серця', description: 'Інна' },
+          { time: '16:00', title: 'Жіноче коло: плетіння гобелена з трав і сердечне спілкування', description: 'Мадхурані — жіноча психологиня і травниця' },
         ],
       },
       {
@@ -140,47 +105,63 @@ export const PROGRAM: ProgramDay[] = [
         title: 'Простір саморозвитку',
         icon: Sprout,
         events: [
-          {
-            time: '12:00',
-            title: 'Майстер-клас «Любов, турбота і захист Роду»',
-            description: 'Проводить Катерина Богданова',
-          },
-          {
-            time: '15:00',
-            title: 'Майстер-клас «Карта бажань»',
-            description: 'З астрологом Анджалі',
-          },
-          {
-            time: '16:00',
-            title:
-              'Лекція-бесіда про дородову, родову та післяродову підготовку',
-            description:
-              'Проводить доула Ольга Кругляк, професійна партнерка в пологи',
-          },
+          { time: '12:00', title: 'Майстер-клас і практика «Любов, турбота та захист роду»', description: 'Катерина Богданова' },
+          { time: '15:00', title: 'Майстер-клас «Карта бажань»', description: 'Анджалі, ведична астрологиня' },
+          { time: '16:00', title: 'Лекція-бесіда про допологову, пологову та післяпологову підготовку', description: 'Ольга Кругляк — доула та професійна партнерка під час пологів' },
+          { time: '17:00', title: 'Майстер-клас «Основи ароматерапії»', description: 'Олеся Тишко' },
+        ],
+      },
+      {
+        id: 'lectures',
+        title: 'Лекторій',
+        icon: BookOpen,
+        events: [
+          { time: '12:00', title: '«Як зберігати внутрішню рівновагу в часи змін»', description: 'Гірі Магарадж' },
+          { time: '14:00', title: '«Духовний вимір спільноти: чому люди шукають своїх?»', description: 'Мадхав Магарадж' },
+          { time: '15:00', title: '«Справжня духовність у буденному житті»', description: 'Роман Рябчун' },
+          { time: '16:00', title: '«Карма: чи можна змінити нашу долю?»', description: 'Тіртха Магарадж' },
         ],
       },
       {
         id: 'main-stage',
-        title: 'Головна сцена',
+        title: 'Сцена',
         icon: Spotlight,
         featured: true,
         events: [
-          {
-            time: '18:00',
-            title:
-              'Ток-шоу «Чи можна бути щасливим, коли життя йде не за планом?»',
-          },
-          {
-            time: '19:30',
-            title: 'Ведична церемонія «Араті»',
-          },
-          {
-            time: '20:00',
-            title: 'DJ SUNSHINE',
-            description: 'Electro-kirtan',
-          },
+          { time: '16:00', title: 'Sound Healing: медитація та зцілення звуком' },
+          { time: '17:00', title: 'Ток-шоу «Чи можна бути щасливим, коли життя йде не за планом?»' },
+          { time: '18:30', title: 'Ведична церемонія «Араті»' },
+          { time: '19:30', title: 'DJ SUNSHINE: Electro Kirtan' },
         ],
       },
     ],
   },
+];
+
+export const EXCURSIONS = [
+  {
+    title: 'Екскурсія старовинним замком',
+    subtitle: '«Таємниця маєтку генерала Заботіна: історія незавершеного кохання»',
+    description: 'Знайомство зі старовинним замком, його архітектурою, історією та загадковими легендами.',
+  },
+  {
+    title: 'Екскурсія до ґошали',
+    subtitle: '«Корівки любові: ахімса як основний принцип йоги»',
+    description: 'Знайомство з мешканками ґошали та культурою турботи й захисту корів.',
+  }
+];
+
+export const OTHER_LOCATIONS = [
+  {
+    title: 'Чайний простір',
+    description: 'Затишні посиденьки, ароматний чай і тепле спілкування.',
+  },
+  {
+    title: 'Вегетаріанське кафе',
+    description: 'Смачні вегетаріанські страви та фестивальні смаколики.',
+  },
+  {
+    title: 'Дитячий простір',
+    description: 'Творчі, пізнавальні та розважальні активності для дітей.',
+  }
 ];
